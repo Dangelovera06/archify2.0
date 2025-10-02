@@ -23,9 +23,9 @@ export default function Hero() {
           transition={{ duration: 0.8 }}
         >
           <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl mb-6 md:mb-8 leading-tight px-2" style={{ color: 'var(--white)', fontFamily: 'var(--font-display)' }}>
-            The Proven Blueprint for{' '}
-            <span style={{ color: 'var(--brand-200)' }}>Full-Arch Growth</span>
-            {' '}— Launch in Under 7 Days
+            Let this social media system{' '}
+            <span style={{ color: 'var(--brand-200)' }}>10x your full-arch growth</span>
+            {' '}in 7 days.
           </h1>
           
           <p className="text-lg sm:text-xl md:text-2xl mb-8 md:mb-12 max-w-3xl mx-auto px-4" style={{ color: 'var(--white)', lineHeight: '1.6' }}>
