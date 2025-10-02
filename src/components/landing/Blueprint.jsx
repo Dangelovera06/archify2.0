@@ -63,21 +63,26 @@ export default function Blueprint() {
             whileInView={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.6, delay: 0.2 }}
             viewport={{ once: true }}
-            className="relative inline-flex items-center gap-4 px-6 py-4 rounded-full mb-8 overflow-hidden"
+            className="relative inline-flex items-center px-6 py-4 rounded-full mb-8 overflow-hidden min-h-[60px]"
             style={{
               backgroundColor: 'var(--alpha-white-10)',
               border: '1px solid var(--alpha-white-20)'
             }}
           >
-            <div className="relative w-12 h-12 rounded-full overflow-hidden flex-shrink-0">
-              <img 
-                src="/40million-chart.png" 
-                alt="40+ Million Generated" 
-                className="w-full h-full object-cover"
-              />
-              <div className="absolute inset-0 bg-gradient-to-r from-transparent to-black/40" />
-            </div>
-            <span className="text-lg font-semibold relative z-10" style={{ color: 'var(--brand-200)' }}>
+            {/* Background Image */}
+            <div 
+              className="absolute inset-0 rounded-full overflow-hidden"
+              style={{
+                backgroundImage: 'url(/40million-chart.png)',
+                backgroundSize: 'cover',
+                backgroundPosition: 'center',
+                backgroundRepeat: 'no-repeat'
+              }}
+            />
+            {/* Fade Overlay */}
+            <div className="absolute inset-0 bg-gradient-to-r from-black/60 via-black/40 to-transparent rounded-full" />
+            {/* Text Content */}
+            <span className="text-lg font-semibold relative z-10 text-white px-4">
               40+Million Generated using this exact framework
             </span>
           </motion.div>
