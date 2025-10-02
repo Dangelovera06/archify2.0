@@ -20,12 +20,6 @@ const steps = [
     image: "/rev avrg.png",
     title: "Predictable Growth",
     description: "A steady stream of full-arch patients, not one-off leads."
-  },
-  {
-    icon: ArrowRight,
-    image: "/40 m.png",
-    title: "Proven Results",
-    description: "40+Million generated using this exact framework."
   }
 ];
 
@@ -85,7 +79,7 @@ export default function Blueprint() {
           </motion.article>
         </motion.div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8 mb-12 md:mb-16">
+        <div className="grid md:grid-cols-2 gap-6 md:gap-8 mb-12 md:mb-16">
           {steps.map((step, index) => (
             <motion.div
               key={index}
@@ -123,14 +117,15 @@ export default function Blueprint() {
                         loading="lazy"
                         decoding="async"
                       />
-                    </div>
-                    <div className="p-4 sm:p-6 text-center">
-                      <h3 className="text-lg sm:text-xl mb-2 sm:mb-3" style={{ color: 'var(--white)', fontFamily: 'var(--font-display)' }}>
-                        {step.title}
-                      </h3>
-                      <p className="text-sm sm:text-base" style={{ color: 'var(--white)' }}>
-                        {step.description}
-                      </p>
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
+                      <div className="absolute bottom-0 left-0 right-0 p-4 sm:p-6 text-center">
+                        <h3 className="text-lg sm:text-xl mb-1 sm:mb-2" style={{ color: 'var(--white)', fontFamily: 'var(--font-display)' }}>
+                          {step.title}
+                        </h3>
+                        <p className="text-xs sm:text-sm" style={{ color: 'var(--white)' }}>
+                          {step.description}
+                        </p>
+                      </div>
                     </div>
                   </>
                 ) : (
