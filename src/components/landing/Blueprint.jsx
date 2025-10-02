@@ -5,6 +5,7 @@ import { ArrowRight, FileText, Target, TrendingUp } from "lucide-react";
 const steps = [
   {
     icon: FileText,
+    image: "/docs-icon.png",
     title: "Authority Content",
     description: "Story-driven posts that earn patient trust."
   },
@@ -15,6 +16,7 @@ const steps = [
   },
   {
     icon: TrendingUp,
+    image: "/revenue-chart.png",
     title: "Predictable Growth",
     description: "A steady stream of full-arch patients, not one-off leads."
   }
@@ -47,6 +49,28 @@ export default function Blueprint() {
           <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl mb-6 md:mb-8 px-4" style={{ color: 'var(--white)', fontFamily: 'var(--font-display)' }}>
             Three Simple Steps to Predictable Implant Growth
           </h2>
+
+          {/* 40+Million Generated Bubble */}
+          <motion.div
+            initial={{ opacity: 0, scale: 0.8 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            viewport={{ once: true }}
+            className="inline-flex items-center gap-3 px-6 py-3 rounded-full mb-8"
+            style={{
+              backgroundColor: 'var(--alpha-white-10)',
+              border: '1px solid var(--alpha-white-20)'
+            }}
+          >
+            <img 
+              src="/40million-chart.png" 
+              alt="40+ Million Generated" 
+              className="w-12 h-12 object-contain"
+            />
+            <span className="text-lg font-semibold" style={{ color: 'var(--brand-200)' }}>
+              40+Million Generated using this exact framework
+            </span>
+          </motion.div>
         </motion.div>
 
         <div className="grid md:grid-cols-3 gap-6 md:gap-8 mb-12 md:mb-16">
@@ -81,7 +105,15 @@ export default function Blueprint() {
                   className="inline-flex p-3 sm:p-4 rounded-full mb-4 sm:mb-6"
                   style={{ backgroundColor: 'var(--alpha-white-10)' }}
                 >
-                  <step.icon className="w-6 h-6 sm:w-8 sm:h-8" style={{ color: 'var(--brand-200)' }} />
+                  {step.image ? (
+                    <img 
+                      src={step.image} 
+                      alt={step.title} 
+                      className="w-8 h-8 sm:w-10 sm:h-10 object-contain"
+                    />
+                  ) : (
+                    <step.icon className="w-6 h-6 sm:w-8 sm:h-8" style={{ color: 'var(--brand-200)' }} />
+                  )}
                 </div>
 
                 <h3 className="text-xl sm:text-2xl mb-3 sm:mb-4" style={{ color: 'var(--white)', fontFamily: 'var(--font-display)' }}>
