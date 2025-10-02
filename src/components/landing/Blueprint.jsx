@@ -20,6 +20,12 @@ const steps = [
     image: "/rev avrg.png",
     title: "Predictable Growth",
     description: "A steady stream of full-arch patients, not one-off leads."
+  },
+  {
+    icon: ArrowRight,
+    image: "/40 m.png",
+    title: "40+Million Generated",
+    description: "using this exact framework"
   }
 ];
 
@@ -48,35 +54,9 @@ export default function Blueprint() {
           </div>
 
           <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl mb-6 md:mb-8 px-4" style={{ color: 'var(--white)', fontFamily: 'var(--font-display)' }}>
-            Three Simple Steps to Predictable Implant Growth
+            Four Steps to Predictable Implant Growth
           </h2>
 
-          {/* 40+Million Generated Bubble Card */}
-          <motion.article
-            initial={{ opacity: 0, scale: 0.8 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-            viewport={{ once: true }}
-            className="w-full max-w-[320px] mx-auto rounded-[16px] border border-[var(--alpha-white-20)] bg-[var(--alpha-white-10)] overflow-hidden mb-8"
-          >
-            <div className="relative [aspect-ratio:3/2]">
-              <img
-                src="/40 m.png"
-                alt="40+ Million Generated"
-                className="absolute inset-0 h-full w-full object-cover"
-                loading="lazy"
-                decoding="async"
-              />
-            </div>
-            <div className="p-4">
-              <h3 className="m-0 mb-1 font-['Inter_Display',Inter,system-ui,sans-serif] text-[18px] font-bold leading-[1.25] text-[var(--brand-200)]">
-                40+Million Generated
-              </h3>
-              <p className="m-0 text-[14px] leading-[1.6] text-[var(--white)]">
-                using this exact framework
-              </p>
-            </div>
-          </motion.article>
         </motion.div>
 
         <div className="grid md:grid-cols-2 gap-6 md:gap-8 mb-12 md:mb-16">
