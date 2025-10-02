@@ -57,35 +57,32 @@ export default function Blueprint() {
             Three Simple Steps to Predictable Implant Growth
           </h2>
 
-          {/* 40+Million Generated Bubble */}
-          <motion.div
+          {/* 40+Million Generated Bubble Card */}
+          <motion.article
             initial={{ opacity: 0, scale: 0.8 }}
             whileInView={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.6, delay: 0.2 }}
             viewport={{ once: true }}
-            className="relative inline-flex items-center px-6 py-4 rounded-full mb-8 overflow-hidden min-h-[60px]"
-            style={{
-              backgroundColor: 'var(--alpha-white-10)',
-              border: '1px solid var(--alpha-white-20)'
-            }}
+            className="w-full max-w-[442px] mx-auto rounded-[16px] border border-[var(--alpha-white-20)] bg-[var(--alpha-white-10)] overflow-hidden mb-8"
           >
-            {/* Background Image */}
-            <div 
-              className="absolute inset-0 rounded-full overflow-hidden"
-              style={{
-                backgroundImage: 'url(/40million-chart.png)',
-                backgroundSize: 'cover',
-                backgroundPosition: 'center',
-                backgroundRepeat: 'no-repeat'
-              }}
-            />
-            {/* Fade Overlay */}
-            <div className="absolute inset-0 bg-gradient-to-r from-black/60 via-black/40 to-transparent rounded-full" />
-            {/* Text Content */}
-            <span className="text-lg font-semibold relative z-10 text-white px-4">
-              40+Million Generated using this exact framework
-            </span>
-          </motion.div>
+            <div className="relative [aspect-ratio:3/2]">
+              <img
+                src="/40million-chart.png"
+                alt="40+ Million Generated"
+                className="absolute inset-0 h-full w-full object-contain"
+                loading="lazy"
+                decoding="async"
+              />
+            </div>
+            <div className="p-5">
+              <h3 className="m-0 mb-2 font-['Inter_Display',Inter,system-ui,sans-serif] text-[20px] font-bold leading-[1.25] text-[var(--brand-200)]">
+                40+Million Generated
+              </h3>
+              <p className="m-0 text-[16px] leading-[1.6] text-[var(--white)]">
+                using this exact framework
+              </p>
+            </div>
+          </motion.article>
         </motion.div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8 mb-12 md:mb-16">
