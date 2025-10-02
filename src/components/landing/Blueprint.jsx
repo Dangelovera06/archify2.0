@@ -5,25 +5,25 @@ import { ArrowRight, FileText, Target, TrendingUp } from "lucide-react";
 const steps = [
   {
     icon: FileText,
-    image: "/docs-icon.png",
+    image: "/docs needed.png",
     title: "Authority Content",
     description: "Story-driven posts that earn patient trust."
   },
   {
     icon: Target,
-    image: "/40million-chart.png",
+    image: "/40 m.png",
     title: "Smart Ads",
     description: "Targeted campaigns that actually convert into consults."
   },
   {
     icon: TrendingUp,
-    image: "/revenue-chart.png",
+    image: "/rev avrg.png",
     title: "Predictable Growth",
     description: "A steady stream of full-arch patients, not one-off leads."
   },
   {
     icon: ArrowRight,
-    image: "/40million-chart.png",
+    image: "/40 m.png",
     title: "Proven Results",
     description: "40+Million generated using this exact framework."
   }
@@ -67,7 +67,7 @@ export default function Blueprint() {
           >
             <div className="relative [aspect-ratio:3/2]">
               <img
-                src="/40million-chart.png"
+                src="/40 m.png"
                 alt="40+ Million Generated"
                 className="absolute inset-0 h-full w-full object-contain"
                 loading="lazy"
@@ -107,40 +107,50 @@ export default function Blueprint() {
               </div>
 
               <div 
-                className="p-6 sm:p-8 rounded-3xl text-center h-full pt-10 sm:pt-12"
+                className="rounded-3xl overflow-hidden h-full"
                 style={{
                   backgroundColor: 'var(--alpha-white-5)',
                   border: '1px solid var(--alpha-white-10)'
                 }}
               >
-                <div 
-                  className="relative w-16 h-16 sm:w-20 sm:h-20 mx-auto mb-4 sm:mb-6 rounded-full overflow-hidden"
-                  style={{ backgroundColor: 'var(--alpha-white-10)' }}
-                >
-                  {step.image ? (
-                    <>
-                      <img 
-                        src={step.image} 
-                        alt={step.title} 
-                        className="w-full h-full object-cover"
+                {step.image ? (
+                  <>
+                    <div className="relative [aspect-ratio:3/2]">
+                      <img
+                        src={step.image}
+                        alt={step.title}
+                        className="absolute inset-0 h-full w-full object-contain"
+                        loading="lazy"
+                        decoding="async"
                       />
-                      <div 
-                        className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-black/60"
-                      />
-                    </>
-                  ) : (
-                    <div className="w-full h-full flex items-center justify-center">
-                      <step.icon className="w-8 h-8 sm:w-10 sm:h-10" style={{ color: 'var(--brand-200)' }} />
                     </div>
-                  )}
-                </div>
-
-                <h3 className="text-xl sm:text-2xl mb-3 sm:mb-4" style={{ color: 'var(--white)', fontFamily: 'var(--font-display)' }}>
-                  {step.title}
-                </h3>
-                <p className="text-sm sm:text-base" style={{ color: 'var(--white)' }}>
-                  {step.description}
-                </p>
+                    <div className="p-4 sm:p-6 text-center">
+                      <h3 className="text-lg sm:text-xl mb-2 sm:mb-3" style={{ color: 'var(--white)', fontFamily: 'var(--font-display)' }}>
+                        {step.title}
+                      </h3>
+                      <p className="text-sm sm:text-base" style={{ color: 'var(--white)' }}>
+                        {step.description}
+                      </p>
+                    </div>
+                  </>
+                ) : (
+                  <div className="p-6 sm:p-8 text-center h-full pt-10 sm:pt-12">
+                    <div 
+                      className="relative w-16 h-16 sm:w-20 sm:h-20 mx-auto mb-4 sm:mb-6 rounded-full overflow-hidden"
+                      style={{ backgroundColor: 'var(--alpha-white-10)' }}
+                    >
+                      <div className="w-full h-full flex items-center justify-center">
+                        <step.icon className="w-8 h-8 sm:w-10 sm:h-10" style={{ color: 'var(--brand-200)' }} />
+                      </div>
+                    </div>
+                    <h3 className="text-xl sm:text-2xl mb-3 sm:mb-4" style={{ color: 'var(--white)', fontFamily: 'var(--font-display)' }}>
+                      {step.title}
+                    </h3>
+                    <p className="text-sm sm:text-base" style={{ color: 'var(--white)' }}>
+                      {step.description}
+                    </p>
+                  </div>
+                )}
               </div>
             </motion.div>
           ))}
