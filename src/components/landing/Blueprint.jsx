@@ -69,7 +69,7 @@ export default function Blueprint() {
               <img
                 src="/40 m.png"
                 alt="40+ Million Generated"
-                className="absolute inset-0 h-full w-full object-contain"
+                className="absolute inset-0 h-full w-full object-cover"
                 loading="lazy"
                 decoding="async"
               />
@@ -119,7 +119,7 @@ export default function Blueprint() {
                       <img
                         src={step.image}
                         alt={step.title}
-                        className="absolute inset-0 h-full w-full object-contain"
+                        className="absolute inset-0 h-full w-full object-cover"
                         loading="lazy"
                         decoding="async"
                       />
