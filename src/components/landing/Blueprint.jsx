@@ -11,7 +11,7 @@ const steps = [
   },
   {
     icon: Target,
-    image: "/40 m.png",
+    image: "/ads.png",
     title: "Smart Ads",
     description: "Targeted campaigns that actually convert into consults."
   },
