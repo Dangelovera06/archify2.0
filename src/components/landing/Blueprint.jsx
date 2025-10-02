@@ -63,7 +63,7 @@ export default function Blueprint() {
             whileInView={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.6, delay: 0.2 }}
             viewport={{ once: true }}
-            className="w-full max-w-[442px] mx-auto rounded-[16px] border border-[var(--alpha-white-20)] bg-[var(--alpha-white-10)] overflow-hidden mb-8"
+            className="w-full max-w-[320px] mx-auto rounded-[16px] border border-[var(--alpha-white-20)] bg-[var(--alpha-white-10)] overflow-hidden mb-8"
           >
             <div className="relative [aspect-ratio:3/2]">
               <img
@@ -74,11 +74,11 @@ export default function Blueprint() {
                 decoding="async"
               />
             </div>
-            <div className="p-5">
-              <h3 className="m-0 mb-2 font-['Inter_Display',Inter,system-ui,sans-serif] text-[20px] font-bold leading-[1.25] text-[var(--brand-200)]">
+            <div className="p-4">
+              <h3 className="m-0 mb-1 font-['Inter_Display',Inter,system-ui,sans-serif] text-[18px] font-bold leading-[1.25] text-[var(--brand-200)]">
                 40+Million Generated
               </h3>
-              <p className="m-0 text-[16px] leading-[1.6] text-[var(--white)]">
+              <p className="m-0 text-[14px] leading-[1.6] text-[var(--white)]">
                 using this exact framework
               </p>
             </div>
