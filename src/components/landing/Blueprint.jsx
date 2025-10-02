@@ -11,6 +11,7 @@ const steps = [
   },
   {
     icon: Target,
+    image: "/40million-chart.png",
     title: "Smart Ads",
     description: "Targeted campaigns that actually convert into consults."
   },
@@ -19,6 +20,12 @@ const steps = [
     image: "/revenue-chart.png",
     title: "Predictable Growth",
     description: "A steady stream of full-arch patients, not one-off leads."
+  },
+  {
+    icon: ArrowRight,
+    image: "/40million-chart.png",
+    title: "Proven Results",
+    description: "40+Million generated using this exact framework."
   }
 ];
 
@@ -56,24 +63,27 @@ export default function Blueprint() {
             whileInView={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.6, delay: 0.2 }}
             viewport={{ once: true }}
-            className="inline-flex items-center gap-3 px-6 py-3 rounded-full mb-8"
+            className="relative inline-flex items-center gap-4 px-6 py-4 rounded-full mb-8 overflow-hidden"
             style={{
               backgroundColor: 'var(--alpha-white-10)',
               border: '1px solid var(--alpha-white-20)'
             }}
           >
-            <img 
-              src="/40million-chart.png" 
-              alt="40+ Million Generated" 
-              className="w-12 h-12 object-contain"
-            />
-            <span className="text-lg font-semibold" style={{ color: 'var(--brand-200)' }}>
+            <div className="relative w-12 h-12 rounded-full overflow-hidden flex-shrink-0">
+              <img 
+                src="/40million-chart.png" 
+                alt="40+ Million Generated" 
+                className="w-full h-full object-cover"
+              />
+              <div className="absolute inset-0 bg-gradient-to-r from-transparent to-black/40" />
+            </div>
+            <span className="text-lg font-semibold relative z-10" style={{ color: 'var(--brand-200)' }}>
               40+Million Generated using this exact framework
             </span>
           </motion.div>
         </motion.div>
 
-        <div className="grid md:grid-cols-3 gap-6 md:gap-8 mb-12 md:mb-16">
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8 mb-12 md:mb-16">
           {steps.map((step, index) => (
             <motion.div
               key={index}
@@ -102,17 +112,24 @@ export default function Blueprint() {
                 }}
               >
                 <div 
-                  className="inline-flex p-3 sm:p-4 rounded-full mb-4 sm:mb-6"
+                  className="relative w-16 h-16 sm:w-20 sm:h-20 mx-auto mb-4 sm:mb-6 rounded-full overflow-hidden"
                   style={{ backgroundColor: 'var(--alpha-white-10)' }}
                 >
                   {step.image ? (
-                    <img 
-                      src={step.image} 
-                      alt={step.title} 
-                      className="w-8 h-8 sm:w-10 sm:h-10 object-contain"
-                    />
+                    <>
+                      <img 
+                        src={step.image} 
+                        alt={step.title} 
+                        className="w-full h-full object-cover"
+                      />
+                      <div 
+                        className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-black/60"
+                      />
+                    </>
                   ) : (
-                    <step.icon className="w-6 h-6 sm:w-8 sm:h-8" style={{ color: 'var(--brand-200)' }} />
+                    <div className="w-full h-full flex items-center justify-center">
+                      <step.icon className="w-8 h-8 sm:w-10 sm:h-10" style={{ color: 'var(--brand-200)' }} />
+                    </div>
                   )}
                 </div>
 
