@@ -3,8 +3,8 @@ import { motion } from "framer-motion";
 import { XCircle, AlertTriangle } from "lucide-react";
 
 const problems = [
-  "Posting random before-and-after photos doesn't create trust.",
-  "Boosting ads without strategy wastes thousands.",
+  "Most practices post random before-and-afters, generic ads, or stock graphics.",
+  "That's noise, not trust.",
   "Patients don't choose the dentist who shouts the loudest — they choose the one they trust the most."
 ];
 
@@ -31,12 +31,12 @@ export default function HardTruth() {
           <div className="inline-flex items-center gap-3 mb-8">
             <AlertTriangle className="w-6 h-6" style={{ color: 'var(--danger-500)' }} />
             <span className="caption" style={{ color: 'var(--danger-400)' }}>
-              The Hard Truth
+              The Noise Problem
             </span>
           </div>
 
           <h2 className="heading-2 mb-12" style={{ color: 'var(--white)' }}>
-            Most Practices Fail on Social Media. Here's Why.
+            Most Practices Create Noise, Not Trust
           </h2>
 
           <div className="space-y-6 mb-12">

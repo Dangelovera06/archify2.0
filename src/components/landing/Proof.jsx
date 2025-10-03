@@ -14,19 +14,22 @@ const testimonials = [
     quote: "We added $400K in revenue in the first 90 days. Archify.io didn't just fill our schedule — it transformed our practice.",
     author: "Dr. Michael Stevens",
     practice: "Advanced Dental Implants, Austin TX",
-    rating: 5
+    rating: 5,
+    pillar: "Authority Content"
   },
   {
     quote: "Before Archify.io, we were spending $8K/month on ads with zero ROI. Now we have a waitlist for full-arch cases.",
     author: "Dr. Sarah Chen",
     practice: "Pacific Smile Center, San Diego CA",
-    rating: 5
+    rating: 5,
+    pillar: "Smart Ads"
   },
   {
     quote: "The patient quality is incredible. These aren't tire-kickers — they're ready to move forward with treatment.",
     author: "Dr. James Rodriguez",
     practice: "Elite Implant Solutions, Miami FL",
-    rating: 5
+    rating: 5,
+    pillar: "Predictable Growth"
   }
 ];
 
@@ -120,6 +123,12 @@ export default function Proof() {
                 </p>
 
                 <div className="text-center pt-6" style={{ borderTop: '1px solid var(--alpha-white-10)' }}>
+                  <div className="inline-block px-3 py-1 rounded-full text-xs font-semibold mb-3" style={{ 
+                    backgroundColor: 'var(--alpha-white-10)', 
+                    color: 'var(--brand-200)' 
+                  }}>
+                    {testimonial.pillar}
+                  </div>
                   <div className="body font-semibold mb-1" style={{ color: 'var(--white)' }}>
                     {testimonial.author}
                   </div>

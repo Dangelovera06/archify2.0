@@ -23,13 +23,13 @@ export default function Hero() {
           transition={{ duration: 0.8 }}
         >
           <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl mb-6 md:mb-8 leading-tight px-2" style={{ color: 'var(--white)', fontFamily: 'var(--font-display)' }}>
-            Let this social media system{' '}
-            <span style={{ color: 'var(--brand-200)' }}>10x your full-arch growth</span>
-            {' '}in 7 days.
+            How Implant Dentists Consistently Book{' '}
+            <span style={{ color: 'var(--brand-200)' }}>3–5 Full-Arch Cases in 30 Days</span>
+            {' '}Without Referrals
           </h1>
           
           <p className="text-lg sm:text-xl md:text-2xl mb-8 md:mb-12 max-w-3xl mx-auto px-4" style={{ color: 'var(--white)', lineHeight: '1.6' }}>
-            Turn social media into 20+ implant consults in 14 days — and add $500K+ in predictable revenue
+            Powered by the 4-Step Full-Arch Magnet Method™ — trusted nationwide.
           </p>
 
           <div className="flex flex-col items-center gap-4 md:gap-6 mb-6 md:mb-8 px-4">
@@ -53,7 +53,7 @@ export default function Hero() {
                 }}
               />
               <span className="relative font-semibold text-sm sm:text-base md:text-lg lg:text-xl leading-relaxed whitespace-nowrap flex items-center justify-center gap-2">
-                <span>Get the Blueprint. Get the Patients.</span>
+                <span>See the Method Now</span>
                 <ArrowRight className="w-5 h-5 md:w-6 md:h-6 flex-shrink-0" />
               </span>
             </button>

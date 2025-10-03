@@ -49,7 +49,7 @@ export default function Blueprint() {
                 border: '1px solid var(--alpha-white-10)'
               }}
             >
-              The Blueprint
+              The Full-Arch Magnet Method™
             </span>
           </div>
 
@@ -158,7 +158,7 @@ export default function Blueprint() {
               }}
             />
             <span className="relative font-semibold text-sm sm:text-base md:text-lg lg:text-xl leading-relaxed whitespace-nowrap flex items-center justify-center gap-2">
-              <span>Claim the Blueprint Now</span>
+              <span>Get the Full-Arch Magnet Blueprint — the exact 4-step content system trusted by practices generating $40M+ in implant revenue.</span>
               <ArrowRight className="w-5 h-5 md:w-6 md:h-6 flex-shrink-0" />
             </span>
           </button>
