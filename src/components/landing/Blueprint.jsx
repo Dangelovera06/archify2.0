@@ -69,16 +69,6 @@ export default function Blueprint() {
               viewport={{ once: true }}
               className="relative"
             >
-              <div 
-                className="absolute -top-3 -left-3 w-10 h-10 sm:w-12 sm:h-12 rounded-full flex items-center justify-center text-xl sm:text-2xl font-bold"
-                style={{ 
-                  backgroundColor: 'var(--brand-200)',
-                  color: 'var(--black)',
-                  fontFamily: 'var(--font-display)'
-                }}
-              >
-                {index + 1}
-              </div>
 
               <div 
                 className="rounded-3xl overflow-hidden h-full"
