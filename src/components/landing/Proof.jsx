@@ -92,46 +92,108 @@ export default function Proof() {
           ))}
         </div>
 
-        {/* Testimonials */}
-        <div className="grid md:grid-cols-3 gap-6">
-          {testimonials.map((testimonial, index) => (
-            <motion.div
-              key={index}
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: index * 0.1 }}
-              viewport={{ once: true }}
-            >
-              <Card 
-                className="p-8 rounded-3xl h-full"
-                style={{
-                  backgroundColor: 'var(--alpha-white-5)',
-                  border: '1px solid var(--alpha-white-10)'
-                }}
+        {/* Testimonials - Horizontal Slider */}
+        <div className="relative overflow-hidden">
+          <div className="flex animate-scroll-reviews">
+            {/* First set of testimonials */}
+            {testimonials.map((testimonial, index) => (
+              <motion.div
+                key={`first-${index}`}
+                className="flex-shrink-0 mx-4 w-80"
+                initial={{ opacity: 0, scale: 0.8 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+                viewport={{ once: true }}
               >
-                <div className="flex justify-center mb-4">
-                  {[...Array(testimonial.rating)].map((_, i) => (
-                    <Star key={i} className="w-5 h-5 fill-current" style={{ color: 'var(--brand-200)' }} />
-                  ))}
-                </div>
-
-                <p className="body mb-8" style={{ color: 'var(--neutral-200)', fontStyle: 'italic' }}>
-                  "{testimonial.quote}"
-                </p>
-
-                <div className="text-center pt-6" style={{ borderTop: '1px solid var(--alpha-white-10)' }}>
-                  <div className="body font-semibold mb-1" style={{ color: 'var(--white)' }}>
-                    {testimonial.author}
+                <Card 
+                  className="p-8 rounded-3xl h-full"
+                  style={{
+                    backgroundColor: 'var(--alpha-white-5)',
+                    border: '1px solid var(--alpha-white-10)'
+                  }}
+                >
+                  <div className="flex justify-center mb-4">
+                    {[...Array(testimonial.rating)].map((_, i) => (
+                      <Star key={i} className="w-5 h-5 fill-current" style={{ color: 'var(--brand-200)' }} />
+                    ))}
                   </div>
-                  <div className="body-small" style={{ color: 'var(--neutral-500)' }}>
-                    {testimonial.practice}
+
+                  <p className="body mb-8" style={{ color: 'var(--neutral-200)', fontStyle: 'italic' }}>
+                    "{testimonial.quote}"
+                  </p>
+
+                  <div className="text-center pt-6" style={{ borderTop: '1px solid var(--alpha-white-10)' }}>
+                    <div className="body font-semibold mb-1" style={{ color: 'var(--white)' }}>
+                      {testimonial.author}
+                    </div>
+                    <div className="body-small" style={{ color: 'var(--neutral-500)' }}>
+                      {testimonial.practice}
+                    </div>
                   </div>
-                </div>
-              </Card>
-            </motion.div>
-          ))}
+                </Card>
+              </motion.div>
+            ))}
+            
+            {/* Duplicate set for seamless loop */}
+            {testimonials.map((testimonial, index) => (
+              <motion.div
+                key={`second-${index}`}
+                className="flex-shrink-0 mx-4 w-80"
+                initial={{ opacity: 0, scale: 0.8 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+                viewport={{ once: true }}
+              >
+                <Card 
+                  className="p-8 rounded-3xl h-full"
+                  style={{
+                    backgroundColor: 'var(--alpha-white-5)',
+                    border: '1px solid var(--alpha-white-10)'
+                  }}
+                >
+                  <div className="flex justify-center mb-4">
+                    {[...Array(testimonial.rating)].map((_, i) => (
+                      <Star key={i} className="w-5 h-5 fill-current" style={{ color: 'var(--brand-200)' }} />
+                    ))}
+                  </div>
+
+                  <p className="body mb-8" style={{ color: 'var(--neutral-200)', fontStyle: 'italic' }}>
+                    "{testimonial.quote}"
+                  </p>
+
+                  <div className="text-center pt-6" style={{ borderTop: '1px solid var(--alpha-white-10)' }}>
+                    <div className="body font-semibold mb-1" style={{ color: 'var(--white)' }}>
+                      {testimonial.author}
+                    </div>
+                    <div className="body-small" style={{ color: 'var(--neutral-500)' }}>
+                      {testimonial.practice}
+                    </div>
+                  </div>
+                </Card>
+              </motion.div>
+            ))}
+          </div>
         </div>
       </div>
+
+      <style jsx>{`
+        @keyframes scroll-reviews {
+          0% {
+            transform: translateX(0);
+          }
+          100% {
+            transform: translateX(-50%);
+          }
+        }
+        
+        .animate-scroll-reviews {
+          animation: scroll-reviews 25s linear infinite;
+        }
+        
+        .animate-scroll-reviews:hover {
+          animation-play-state: paused;
+        }
+      `}</style>
     </section>
   );
 }
