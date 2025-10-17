@@ -11,6 +11,7 @@ import Hero from "../components/landing/Hero";
 import HardTruth from "../components/landing/HardTruth";
 import EmotionalCore from "../components/landing/EmotionalCore";
 import Proof from "../components/landing/Proof";
+import SocialProof from "../components/landing/SocialProof";
 import Blueprint from "../components/landing/Blueprint";
 import FinalClose from "../components/landing/FinalClose";
 
@@ -109,6 +110,7 @@ export default function Landing() {
       <HardTruth />
       <EmotionalCore />
       <Proof />
+      <SocialProof />
       <Blueprint />
       <FinalClose />
 

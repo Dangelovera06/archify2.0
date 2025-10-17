@@ -5,27 +5,18 @@ import { ArrowRight, FileText, Target, TrendingUp } from "lucide-react";
 const steps = [
   {
     icon: FileText,
-    image: "/docs needed.png",
     title: "Authority Content",
     description: "Story-driven posts that earn patient trust."
   },
   {
     icon: Target,
-    image: "/ads.png",
     title: "Smart Ads",
     description: "Targeted campaigns that actually convert into consults."
   },
   {
     icon: TrendingUp,
-    image: "/rev avrg.png",
     title: "Predictable Growth",
     description: "A steady stream of full-arch patients, not one-off leads."
-  },
-  {
-    icon: ArrowRight,
-    image: "/40 m.png",
-    title: "40+Million Generated",
-    description: "using this exact framework"
   }
 ];
 
@@ -49,17 +40,16 @@ export default function Blueprint() {
                 border: '1px solid var(--alpha-white-10)'
               }}
             >
-              The Full-Arch Magnet Method™
+              The Blueprint
             </span>
           </div>
 
           <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl mb-6 md:mb-8 px-4" style={{ color: 'var(--white)', fontFamily: 'var(--font-display)' }}>
-            Four Steps to Predictable Implant Growth
+            Three Simple Steps to Predictable Implant Growth
           </h2>
-
         </motion.div>
 
-        <div className="grid md:grid-cols-2 gap-6 md:gap-8 mb-12 md:mb-16">
+        <div className="grid md:grid-cols-3 gap-6 md:gap-8 mb-12 md:mb-16">
           {steps.map((step, index) => (
             <motion.div
               key={index}
@@ -69,53 +59,37 @@ export default function Blueprint() {
               viewport={{ once: true }}
               className="relative"
             >
+              <div 
+                className="absolute -top-3 -left-3 w-10 h-10 sm:w-12 sm:h-12 rounded-full flex items-center justify-center text-xl sm:text-2xl font-bold"
+                style={{ 
+                  backgroundColor: 'var(--brand-200)',
+                  color: 'var(--black)',
+                  fontFamily: 'var(--font-display)'
+                }}
+              >
+                {index + 1}
+              </div>
 
               <div 
-                className="rounded-3xl overflow-hidden h-full"
+                className="p-6 sm:p-8 rounded-3xl text-center h-full pt-10 sm:pt-12"
                 style={{
                   backgroundColor: 'var(--alpha-white-5)',
                   border: '1px solid var(--alpha-white-10)'
                 }}
               >
-                {step.image ? (
-                  <>
-                    <div className="relative [aspect-ratio:3/2]">
-                      <img
-                        src={step.image}
-                        alt={step.title}
-                        className="absolute inset-0 h-full w-full object-cover"
-                        loading="lazy"
-                        decoding="async"
-                      />
-                      <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
-                      <div className="absolute bottom-0 left-0 right-0 p-4 sm:p-6 text-center">
-                        <h3 className="text-lg sm:text-xl mb-1 sm:mb-2" style={{ color: 'var(--white)', fontFamily: 'var(--font-display)' }}>
-                          {step.title}
-                        </h3>
-                        <p className="text-xs sm:text-sm" style={{ color: 'var(--white)' }}>
-                          {step.description}
-                        </p>
-                      </div>
-                    </div>
-                  </>
-                ) : (
-                  <div className="p-6 sm:p-8 text-center h-full pt-10 sm:pt-12">
-                    <div 
-                      className="relative w-16 h-16 sm:w-20 sm:h-20 mx-auto mb-4 sm:mb-6 rounded-full overflow-hidden"
-                      style={{ backgroundColor: 'var(--alpha-white-10)' }}
-                    >
-                      <div className="w-full h-full flex items-center justify-center">
-                        <step.icon className="w-8 h-8 sm:w-10 sm:h-10" style={{ color: 'var(--brand-200)' }} />
-                      </div>
-                    </div>
-                    <h3 className="text-xl sm:text-2xl mb-3 sm:mb-4" style={{ color: 'var(--white)', fontFamily: 'var(--font-display)' }}>
-                      {step.title}
-                    </h3>
-                    <p className="text-sm sm:text-base" style={{ color: 'var(--white)' }}>
-                      {step.description}
-                    </p>
-                  </div>
-                )}
+                <div 
+                  className="inline-flex p-3 sm:p-4 rounded-full mb-4 sm:mb-6"
+                  style={{ backgroundColor: 'var(--alpha-white-10)' }}
+                >
+                  <step.icon className="w-6 h-6 sm:w-8 sm:h-8" style={{ color: 'var(--brand-200)' }} />
+                </div>
+
+                <h3 className="text-xl sm:text-2xl mb-3 sm:mb-4" style={{ color: 'var(--white)', fontFamily: 'var(--font-display)' }}>
+                  {step.title}
+                </h3>
+                <p className="text-sm sm:text-base" style={{ color: 'var(--white)' }}>
+                  {step.description}
+                </p>
               </div>
             </motion.div>
           ))}
@@ -148,7 +122,7 @@ export default function Blueprint() {
               }}
             />
             <span className="relative font-semibold text-sm sm:text-base md:text-lg lg:text-xl leading-relaxed whitespace-nowrap flex items-center justify-center gap-2">
-              <span>Get the Full-Arch Magnet Blueprint — the exact 4-step content system trusted by practices generating $40M+ in implant revenue.</span>
+              <span>Claim the Blueprint Now</span>
               <ArrowRight className="w-5 h-5 md:w-6 md:h-6 flex-shrink-0" />
             </span>
           </button>
