@@ -3,32 +3,32 @@ import { motion } from "framer-motion";
 
 const socialProofImages = [
   {
-    src: "/3.jpg",
+    src: "/SOCIAL PROOF/3 copy.png",
     alt: "Dental team at practice",
     title: "Elite Dental Practice Team"
   },
   {
-    src: "/4.jpg", 
+    src: "/SOCIAL PROOF/4 copy.png", 
     alt: "Medical aesthetics team",
     title: "Refresh Palm Beach Medical Aesthetics"
   },
   {
-    src: "/5.jpg",
+    src: "/SOCIAL PROOF/5 copy.png",
     alt: "Implant specialists team",
     title: "Implant Specialists Team"
   },
   {
-    src: "/6.jpg",
+    src: "/SOCIAL PROOF/6 copy.png",
     alt: "Full-arch restoration team",
     title: "Full-Arch Restoration Team"
   },
   {
-    src: "/3.jpg",
+    src: "/SOCIAL PROOF/3 copy.png",
     alt: "Dental team at practice",
     title: "Elite Dental Practice Team"
   },
   {
-    src: "/4.jpg",
+    src: "/SOCIAL PROOF/4 copy.png",
     alt: "Medical aesthetics team",
     title: "Refresh Palm Beach Medical Aesthetics"
   }
