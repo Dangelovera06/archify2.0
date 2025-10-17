@@ -36,8 +36,8 @@ const socialProofImages = [
 
 export default function SocialProof() {
   return (
-    <section className="py-16 md:py-24 relative overflow-hidden">
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section className="py-16 md:py-24 relative">
+      <div className="max-w-6xl mx-auto px-2 sm:px-4 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -66,7 +66,7 @@ export default function SocialProof() {
             {socialProofImages.map((image, index) => (
               <motion.div
                 key={`first-${index}`}
-                className="flex-shrink-0 mx-4"
+                className="flex-shrink-0 mx-2 sm:mx-4"
                 initial={{ opacity: 0, scale: 0.8 }}
                 whileInView={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
@@ -88,7 +88,7 @@ export default function SocialProof() {
             {socialProofImages.map((image, index) => (
               <motion.div
                 key={`second-${index}`}
-                className="flex-shrink-0 mx-4"
+                className="flex-shrink-0 mx-2 sm:mx-4"
                 initial={{ opacity: 0, scale: 0.8 }}
                 whileInView={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
