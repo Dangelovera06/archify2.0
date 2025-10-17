@@ -3,22 +3,22 @@ import { motion } from "framer-motion";
 
 const videos = [
   {
-    src: "https://www.youtube.com/embed/YOUR_VIDEO_ID_1",
+    src: "https://www.youtube.com/embed/uQINcOvA1nU?rel=0&modestbranding=1",
     title: "Doctor Testimonial",
     description: "Real practice transformation story"
   },
   {
-    src: "https://www.youtube.com/embed/YOUR_VIDEO_ID_2", 
+    src: "https://www.youtube.com/embed/XxUT6tmzq-k?rel=0&modestbranding=1", 
     title: "Nancy Testimonial",
     description: "Patient success story"
   },
   {
-    src: "https://www.youtube.com/embed/YOUR_VIDEO_ID_3",
+    src: "https://www.youtube.com/embed/uQINcOvA1nU?rel=0&modestbranding=1",
     title: "Q2 Results",
     description: "Quarterly performance review"
   },
   {
-    src: "https://www.youtube.com/embed/YOUR_VIDEO_ID_4",
+    src: "https://www.youtube.com/embed/XxUT6tmzq-k?rel=0&modestbranding=1",
     title: "Practice Success",
     description: "Full-arch case study"
   }
@@ -68,8 +68,9 @@ export default function VideoSlider() {
                     src={video.src}
                     title={video.title}
                     frameBorder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                     allowFullScreen
+                    loading="lazy"
                   ></iframe>
                   
                   {/* Video overlay with title */}
@@ -105,8 +106,9 @@ export default function VideoSlider() {
                     src={video.src}
                     title={video.title}
                     frameBorder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                     allowFullScreen
+                    loading="lazy"
                   ></iframe>
                   
                   {/* Video overlay with title */}
