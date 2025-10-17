@@ -9,9 +9,10 @@ import {
 
 import Hero from "../components/landing/Hero";
 import HardTruth from "../components/landing/HardTruth";
+import SocialProof from "../components/landing/SocialProof";
+import VideoSlider from "../components/landing/VideoSlider";
 import EmotionalCore from "../components/landing/EmotionalCore";
 import Proof from "../components/landing/Proof";
-import SocialProof from "../components/landing/SocialProof";
 import Blueprint from "../components/landing/Blueprint";
 import FinalClose from "../components/landing/FinalClose";
 
@@ -112,6 +113,7 @@ export default function Landing() {
       <Hero />
       <HardTruth />
       <SocialProof />
+      <VideoSlider />
       <EmotionalCore />
       <Proof />
       <Blueprint />
