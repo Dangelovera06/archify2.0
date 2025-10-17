@@ -51,7 +51,7 @@ export default function FinalClose() {
 
           <div className="mb-6 md:mb-8 px-4">
             <a
-              href="https://whop.com/checkout/plan_uSIx6iByd4a9F?d2c=true"
+              href="https://whop.com/archify-io/social-media-dental-blueprint/"
               target="_blank"
               rel="noopener noreferrer"
               className="relative w-full sm:w-auto inline-flex items-center justify-center gap-2 sm:gap-3 rounded-xl px-6 sm:px-8 md:px-10 py-4 sm:py-5 md:py-6 text-black transition-all active:translate-y-px active:scale-[0.99] hover:saturate-110 hover:brightness-105"

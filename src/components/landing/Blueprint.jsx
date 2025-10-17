@@ -102,16 +102,16 @@ export default function Blueprint() {
           viewport={{ once: true }}
           className="text-center px-4"
         >
-          <a
-            href="https://whop.com/checkout/plan_uSIx6iByd4a9F?d2c=true"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="relative w-full sm:w-auto inline-flex items-center justify-center gap-2 sm:gap-3 rounded-xl px-6 sm:px-8 md:px-10 py-4 sm:py-5 md:py-6 text-black transition-all active:translate-y-px active:scale-[0.99] hover:saturate-110 hover:brightness-105"
-            style={{
-              background: "linear-gradient(290deg, #ffd999 0%, #ffb433 30.2857%, #f5d49a 67.2878%, #ffb433 100%)",
-              boxShadow: "0 1px 0 rgba(0,0,0,.08)"
-            }}
-          >
+            <a
+              href="https://whop.com/archify-io/social-media-dental-blueprint/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="relative w-full sm:w-auto inline-flex items-center justify-center gap-2 sm:gap-3 rounded-xl px-6 sm:px-8 md:px-10 py-4 sm:py-5 md:py-6 text-black transition-all active:translate-y-px active:scale-[0.99] hover:saturate-110 hover:brightness-105"
+              style={{
+                background: "linear-gradient(290deg, #ffd999 0%, #ffb433 30.2857%, #f5d49a 67.2878%, #ffb433 100%)",
+                boxShadow: "0 1px 0 rgba(0,0,0,.08)"
+              }}
+            >
             <span 
               className="pointer-events-none absolute inset-0 rounded-full blur-[10px] opacity-40"
               style={{
