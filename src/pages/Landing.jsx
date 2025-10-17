@@ -108,9 +108,9 @@ export default function Landing() {
 
       <Hero />
       <HardTruth />
+      <SocialProof />
       <EmotionalCore />
       <Proof />
-      <SocialProof />
       <Blueprint />
       <FinalClose />
 
