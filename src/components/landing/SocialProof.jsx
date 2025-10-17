@@ -72,7 +72,7 @@ export default function SocialProof() {
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 viewport={{ once: true }}
               >
-                <div className="relative w-64 h-48 rounded-2xl overflow-hidden group cursor-pointer">
+                <div className="relative w-48 h-36 sm:w-56 sm:h-42 md:w-64 md:h-48 rounded-2xl overflow-hidden group cursor-pointer">
                   <img
                     src={image.src}
                     alt={image.alt}
@@ -80,9 +80,6 @@ export default function SocialProof() {
                     loading="lazy"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                  <div className="absolute bottom-0 left-0 right-0 p-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                    <h3 className="text-sm font-semibold">{image.title}</h3>
-                  </div>
                 </div>
               </motion.div>
             ))}
@@ -97,7 +94,7 @@ export default function SocialProof() {
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 viewport={{ once: true }}
               >
-                <div className="relative w-64 h-48 rounded-2xl overflow-hidden group cursor-pointer">
+                <div className="relative w-48 h-36 sm:w-56 sm:h-42 md:w-64 md:h-48 rounded-2xl overflow-hidden group cursor-pointer">
                   <img
                     src={image.src}
                     alt={image.alt}
@@ -105,9 +102,6 @@ export default function SocialProof() {
                     loading="lazy"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                  <div className="absolute bottom-0 left-0 right-0 p-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                    <h3 className="text-sm font-semibold">{image.title}</h3>
-                  </div>
                 </div>
               </motion.div>
             ))}

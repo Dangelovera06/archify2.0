@@ -99,14 +99,14 @@ export default function Proof() {
             {testimonials.map((testimonial, index) => (
               <motion.div
                 key={`first-${index}`}
-                className="flex-shrink-0 mx-3 w-64"
+                className="flex-shrink-0 mx-2 sm:mx-3 w-56 sm:w-64"
                 initial={{ opacity: 0, scale: 0.8 }}
                 whileInView={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 viewport={{ once: true }}
               >
                 <Card 
-                  className="p-6 rounded-2xl h-full"
+                  className="p-4 sm:p-6 rounded-2xl h-full"
                   style={{
                     backgroundColor: 'var(--alpha-white-5)',
                     border: '1px solid var(--alpha-white-10)'
@@ -114,16 +114,16 @@ export default function Proof() {
                 >
                   <div className="flex justify-center mb-3">
                     {[...Array(testimonial.rating)].map((_, i) => (
-                      <Star key={i} className="w-4 h-4 fill-current" style={{ color: 'var(--brand-200)' }} />
+                      <Star key={i} className="w-3 h-3 sm:w-4 sm:h-4 fill-current" style={{ color: 'var(--brand-200)' }} />
                     ))}
                   </div>
 
-                  <p className="text-sm mb-6 leading-relaxed" style={{ color: 'var(--neutral-200)', fontStyle: 'italic' }}>
+                  <p className="text-xs sm:text-sm mb-4 sm:mb-6 leading-relaxed" style={{ color: 'var(--neutral-200)', fontStyle: 'italic' }}>
                     "{testimonial.quote}"
                   </p>
 
-                  <div className="text-center pt-4" style={{ borderTop: '1px solid var(--alpha-white-10)' }}>
-                    <div className="text-sm font-semibold mb-1" style={{ color: 'var(--white)' }}>
+                  <div className="text-center pt-3 sm:pt-4" style={{ borderTop: '1px solid var(--alpha-white-10)' }}>
+                    <div className="text-xs sm:text-sm font-semibold mb-1" style={{ color: 'var(--white)' }}>
                       {testimonial.author}
                     </div>
                     <div className="text-xs" style={{ color: 'var(--neutral-500)' }}>
@@ -138,14 +138,14 @@ export default function Proof() {
             {testimonials.map((testimonial, index) => (
               <motion.div
                 key={`second-${index}`}
-                className="flex-shrink-0 mx-3 w-64"
+                className="flex-shrink-0 mx-2 sm:mx-3 w-56 sm:w-64"
                 initial={{ opacity: 0, scale: 0.8 }}
                 whileInView={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 viewport={{ once: true }}
               >
                 <Card 
-                  className="p-6 rounded-2xl h-full"
+                  className="p-4 sm:p-6 rounded-2xl h-full"
                   style={{
                     backgroundColor: 'var(--alpha-white-5)',
                     border: '1px solid var(--alpha-white-10)'
@@ -153,16 +153,16 @@ export default function Proof() {
                 >
                   <div className="flex justify-center mb-3">
                     {[...Array(testimonial.rating)].map((_, i) => (
-                      <Star key={i} className="w-4 h-4 fill-current" style={{ color: 'var(--brand-200)' }} />
+                      <Star key={i} className="w-3 h-3 sm:w-4 sm:h-4 fill-current" style={{ color: 'var(--brand-200)' }} />
                     ))}
                   </div>
 
-                  <p className="text-sm mb-6 leading-relaxed" style={{ color: 'var(--neutral-200)', fontStyle: 'italic' }}>
+                  <p className="text-xs sm:text-sm mb-4 sm:mb-6 leading-relaxed" style={{ color: 'var(--neutral-200)', fontStyle: 'italic' }}>
                     "{testimonial.quote}"
                   </p>
 
-                  <div className="text-center pt-4" style={{ borderTop: '1px solid var(--alpha-white-10)' }}>
-                    <div className="text-sm font-semibold mb-1" style={{ color: 'var(--white)' }}>
+                  <div className="text-center pt-3 sm:pt-4" style={{ borderTop: '1px solid var(--alpha-white-10)' }}>
+                    <div className="text-xs sm:text-sm font-semibold mb-1" style={{ color: 'var(--white)' }}>
                       {testimonial.author}
                     </div>
                     <div className="text-xs" style={{ color: 'var(--neutral-500)' }}>
