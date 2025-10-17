@@ -4,23 +4,23 @@ import { motion } from "framer-motion";
 const videos = [
   {
     src: "https://www.youtube.com/embed/uQINcOvA1nU?rel=0&modestbranding=1&showinfo=0&controls=0&disablekb=1",
-    title: "Doctor Testimonial",
-    description: "Real practice transformation story"
+    title: "",
+    description: ""
   },
   {
     src: "https://www.youtube.com/embed/XxUT6tmzq-k?rel=0&modestbranding=1&showinfo=0&controls=0&disablekb=1", 
-    title: "Nancy Testimonial",
-    description: "Patient success story"
+    title: "",
+    description: ""
+  },
+  {
+    src: "https://www.youtube.com/embed/9CzZ9LRWr8s?rel=0&modestbranding=1&showinfo=0&controls=0&disablekb=1",
+    title: "",
+    description: ""
   },
   {
     src: "https://www.youtube.com/embed/uQINcOvA1nU?rel=0&modestbranding=1&showinfo=0&controls=0&disablekb=1",
-    title: "Q2 Results",
-    description: "Quarterly performance review"
-  },
-  {
-    src: "https://www.youtube.com/embed/XxUT6tmzq-k?rel=0&modestbranding=1&showinfo=0&controls=0&disablekb=1",
-    title: "Practice Success",
-    description: "Full-arch case study"
+    title: "",
+    description: ""
   }
 ];
 
@@ -72,13 +72,6 @@ export default function VideoSlider() {
                     allowFullScreen
                     loading="lazy"
                   ></iframe>
-                  
-                  {/* Video overlay with title */}
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                  <div className="absolute bottom-0 left-0 right-0 p-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                    <h3 className="text-sm font-semibold mb-1">{video.title}</h3>
-                    <p className="text-xs">{video.description}</p>
-                  </div>
                 </div>
               </motion.div>
             ))}
@@ -103,13 +96,6 @@ export default function VideoSlider() {
                     allowFullScreen
                     loading="lazy"
                   ></iframe>
-                  
-                  {/* Video overlay with title */}
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                  <div className="absolute bottom-0 left-0 right-0 p-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                    <h3 className="text-sm font-semibold mb-1">{video.title}</h3>
-                    <p className="text-xs">{video.description}</p>
-                  </div>
                 </div>
               </motion.div>
             ))}
