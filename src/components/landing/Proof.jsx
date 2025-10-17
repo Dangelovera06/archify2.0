@@ -94,39 +94,39 @@ export default function Proof() {
 
         {/* Testimonials - Horizontal Slider */}
         <div className="relative overflow-hidden">
-          <div className="flex animate-scroll-reviews">
+          <div className="flex animate-scroll-reviews overflow-x-auto scrollbar-hide">
             {/* First set of testimonials */}
             {testimonials.map((testimonial, index) => (
               <motion.div
                 key={`first-${index}`}
-                className="flex-shrink-0 mx-4 w-80"
+                className="flex-shrink-0 mx-3 w-64"
                 initial={{ opacity: 0, scale: 0.8 }}
                 whileInView={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 viewport={{ once: true }}
               >
                 <Card 
-                  className="p-8 rounded-3xl h-full"
+                  className="p-6 rounded-2xl h-full"
                   style={{
                     backgroundColor: 'var(--alpha-white-5)',
                     border: '1px solid var(--alpha-white-10)'
                   }}
                 >
-                  <div className="flex justify-center mb-4">
+                  <div className="flex justify-center mb-3">
                     {[...Array(testimonial.rating)].map((_, i) => (
-                      <Star key={i} className="w-5 h-5 fill-current" style={{ color: 'var(--brand-200)' }} />
+                      <Star key={i} className="w-4 h-4 fill-current" style={{ color: 'var(--brand-200)' }} />
                     ))}
                   </div>
 
-                  <p className="body mb-8" style={{ color: 'var(--neutral-200)', fontStyle: 'italic' }}>
+                  <p className="text-sm mb-6 leading-relaxed" style={{ color: 'var(--neutral-200)', fontStyle: 'italic' }}>
                     "{testimonial.quote}"
                   </p>
 
-                  <div className="text-center pt-6" style={{ borderTop: '1px solid var(--alpha-white-10)' }}>
-                    <div className="body font-semibold mb-1" style={{ color: 'var(--white)' }}>
+                  <div className="text-center pt-4" style={{ borderTop: '1px solid var(--alpha-white-10)' }}>
+                    <div className="text-sm font-semibold mb-1" style={{ color: 'var(--white)' }}>
                       {testimonial.author}
                     </div>
-                    <div className="body-small" style={{ color: 'var(--neutral-500)' }}>
+                    <div className="text-xs" style={{ color: 'var(--neutral-500)' }}>
                       {testimonial.practice}
                     </div>
                   </div>
@@ -138,34 +138,34 @@ export default function Proof() {
             {testimonials.map((testimonial, index) => (
               <motion.div
                 key={`second-${index}`}
-                className="flex-shrink-0 mx-4 w-80"
+                className="flex-shrink-0 mx-3 w-64"
                 initial={{ opacity: 0, scale: 0.8 }}
                 whileInView={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 viewport={{ once: true }}
               >
                 <Card 
-                  className="p-8 rounded-3xl h-full"
+                  className="p-6 rounded-2xl h-full"
                   style={{
                     backgroundColor: 'var(--alpha-white-5)',
                     border: '1px solid var(--alpha-white-10)'
                   }}
                 >
-                  <div className="flex justify-center mb-4">
+                  <div className="flex justify-center mb-3">
                     {[...Array(testimonial.rating)].map((_, i) => (
-                      <Star key={i} className="w-5 h-5 fill-current" style={{ color: 'var(--brand-200)' }} />
+                      <Star key={i} className="w-4 h-4 fill-current" style={{ color: 'var(--brand-200)' }} />
                     ))}
                   </div>
 
-                  <p className="body mb-8" style={{ color: 'var(--neutral-200)', fontStyle: 'italic' }}>
+                  <p className="text-sm mb-6 leading-relaxed" style={{ color: 'var(--neutral-200)', fontStyle: 'italic' }}>
                     "{testimonial.quote}"
                   </p>
 
-                  <div className="text-center pt-6" style={{ borderTop: '1px solid var(--alpha-white-10)' }}>
-                    <div className="body font-semibold mb-1" style={{ color: 'var(--white)' }}>
+                  <div className="text-center pt-4" style={{ borderTop: '1px solid var(--alpha-white-10)' }}>
+                    <div className="text-sm font-semibold mb-1" style={{ color: 'var(--white)' }}>
                       {testimonial.author}
                     </div>
-                    <div className="body-small" style={{ color: 'var(--neutral-500)' }}>
+                    <div className="text-xs" style={{ color: 'var(--neutral-500)' }}>
                       {testimonial.practice}
                     </div>
                   </div>
@@ -187,7 +187,16 @@ export default function Proof() {
         }
         
         .animate-scroll-reviews {
-          animation: scroll-reviews 25s linear infinite;
+          animation: scroll-reviews 15s linear infinite;
+        }
+        
+        .scrollbar-hide {
+          -ms-overflow-style: none;
+          scrollbar-width: none;
+        }
+        
+        .scrollbar-hide::-webkit-scrollbar {
+          display: none;
         }
         
         .animate-scroll-reviews:hover {

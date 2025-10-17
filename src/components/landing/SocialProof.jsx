@@ -61,7 +61,7 @@ export default function SocialProof() {
 
         {/* Continuous Horizontal Slider */}
         <div className="relative">
-          <div className="flex animate-scroll">
+          <div className="flex animate-scroll overflow-x-auto scrollbar-hide">
             {/* First set of images */}
             {socialProofImages.map((image, index) => (
               <motion.div
@@ -126,11 +126,20 @@ export default function SocialProof() {
         }
         
         .animate-scroll {
-          animation: scroll 20s linear infinite;
+          animation: scroll 12s linear infinite;
         }
         
         .animate-scroll:hover {
           animation-play-state: paused;
+        }
+        
+        .scrollbar-hide {
+          -ms-overflow-style: none;
+          scrollbar-width: none;
+        }
+        
+        .scrollbar-hide::-webkit-scrollbar {
+          display: none;
         }
       `}</style>
     </section>
