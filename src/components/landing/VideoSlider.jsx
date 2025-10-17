@@ -62,7 +62,7 @@ export default function VideoSlider() {
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 viewport={{ once: true }}
               >
-                <div className="relative w-64 h-48 sm:w-72 sm:h-54 md:w-80 md:h-60 rounded-2xl overflow-hidden group cursor-pointer">
+                <div className="relative w-48 h-64 sm:w-56 sm:h-72 md:w-64 md:h-80 rounded-2xl overflow-hidden group cursor-pointer">
                   <iframe
                     className="w-full h-full"
                     src={video.src}
@@ -82,8 +82,8 @@ export default function VideoSlider() {
                   
                   {/* Play button overlay */}
                   <div className="absolute inset-0 flex items-center justify-center opacity-70 group-hover:opacity-100 transition-opacity duration-300">
-                    <div className="w-12 h-12 sm:w-16 sm:h-16 rounded-full bg-white/20 backdrop-blur-sm flex items-center justify-center">
-                      <div className="w-0 h-0 border-l-[8px] sm:border-l-[12px] border-l-white border-y-[6px] sm:border-y-[8px] border-y-transparent ml-1"></div>
+                    <div className="w-12 h-12 sm:w-16 sm:h-16 rounded-full bg-gray-500/30 backdrop-blur-sm flex items-center justify-center">
+                      <div className="w-0 h-0 border-l-[8px] sm:border-l-[12px] border-l-gray-400 border-y-[6px] sm:border-y-[8px] border-y-transparent ml-1"></div>
                     </div>
                   </div>
                 </div>
@@ -100,7 +100,7 @@ export default function VideoSlider() {
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 viewport={{ once: true }}
               >
-                <div className="relative w-64 h-48 sm:w-72 sm:h-54 md:w-80 md:h-60 rounded-2xl overflow-hidden group cursor-pointer">
+                <div className="relative w-48 h-64 sm:w-56 sm:h-72 md:w-64 md:h-80 rounded-2xl overflow-hidden group cursor-pointer">
                   <iframe
                     className="w-full h-full"
                     src={video.src}
@@ -120,8 +120,8 @@ export default function VideoSlider() {
                   
                   {/* Play button overlay */}
                   <div className="absolute inset-0 flex items-center justify-center opacity-70 group-hover:opacity-100 transition-opacity duration-300">
-                    <div className="w-12 h-12 sm:w-16 sm:h-16 rounded-full bg-white/20 backdrop-blur-sm flex items-center justify-center">
-                      <div className="w-0 h-0 border-l-[8px] sm:border-l-[12px] border-l-white border-y-[6px] sm:border-y-[8px] border-y-transparent ml-1"></div>
+                    <div className="w-12 h-12 sm:w-16 sm:h-16 rounded-full bg-gray-500/30 backdrop-blur-sm flex items-center justify-center">
+                      <div className="w-0 h-0 border-l-[8px] sm:border-l-[12px] border-l-gray-400 border-y-[6px] sm:border-y-[8px] border-y-transparent ml-1"></div>
                     </div>
                   </div>
                 </div>
