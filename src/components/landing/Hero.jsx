@@ -1,7 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { ArrowRight, Star, Shield } from "lucide-react";
-import CountdownTimer from './CountdownTimer';
+import PricingBadge from './PricingBadge';
 
 export default function Hero() {
   return (
@@ -33,8 +33,6 @@ export default function Hero() {
             Turn social media into 20+ implant consults in 14 days — and add $500K+ in predictable revenue
           </p>
 
-          <CountdownTimer />
-
           <div className="flex flex-col items-center gap-4 md:gap-6 mb-6 md:mb-8 px-4">
             <a
               href="https://whop.com/checkout/plan_uSIx6iByd4a9F?d2c=true"
@@ -64,6 +62,8 @@ export default function Hero() {
               </span>
             </a>
           </div>
+
+          <PricingBadge />
 
           {/* Trust Badge */}
           <motion.div

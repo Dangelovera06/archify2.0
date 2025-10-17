@@ -15,6 +15,7 @@ import EmotionalCore from "../components/landing/EmotionalCore";
 import Proof from "../components/landing/Proof";
 import Blueprint from "../components/landing/Blueprint";
 import FinalClose from "../components/landing/FinalClose";
+import CountdownTimer from "../components/landing/CountdownTimer";
 
 export default function Landing() {
   const scrollToSection = (sectionId) => {
@@ -26,6 +27,9 @@ export default function Landing() {
 
   return (
     <div className="min-h-screen overflow-x-hidden w-full" style={{ backgroundColor: 'var(--neutral-950)' }}>
+      {/* Floating Countdown Timer */}
+      <CountdownTimer />
+      
       {/* Navigation */}
       <nav className="fixed top-0 left-0 right-0 z-50 backdrop-blur-xl w-full" style={{ backgroundColor: 'var(--alpha-white-5)', borderBottom: '1px solid var(--alpha-white-10)' }}>
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 w-full">

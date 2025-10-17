@@ -35,124 +35,64 @@ export default function CountdownTimer() {
   }, []);
 
   return (
-    <div className="w-full max-w-4xl mx-auto mb-8 md:mb-12 px-4">
-      <div 
-        className="rounded-2xl p-6 md:p-8 border"
-        style={{
-          background: 'var(--alpha-white-5)',
-          borderColor: 'var(--alpha-white-10)'
-        }}
-      >
-        {/* Discount Badge */}
-        <div className="text-center mb-6">
-          <div className="inline-block px-4 py-2 rounded-full mb-3" style={{ 
+    <div className="fixed top-20 left-0 right-0 z-40 px-4 py-3" style={{
+      background: 'linear-gradient(180deg, rgba(15, 15, 16, 0.95) 0%, rgba(15, 15, 16, 0.98) 100%)',
+      backdropFilter: 'blur(10px)',
+      borderBottom: '1px solid var(--alpha-white-10)',
+      boxShadow: '0 4px 12px rgba(0, 0, 0, 0.3)'
+    }}>
+      <div className="max-w-7xl mx-auto flex items-center justify-between gap-4 flex-wrap">
+        {/* Left: Limited Time Badge */}
+        <div className="flex items-center gap-3">
+          <div className="inline-block px-3 py-1 rounded-full text-xs sm:text-sm font-bold" style={{ 
             background: 'var(--brand-200)',
             color: 'var(--black)'
           }}>
-            <span className="font-bold">LIMITED TIME OFFER</span>
+            LIMITED TIME
           </div>
-          <div className="flex items-center justify-center gap-3 mb-2">
-            <span 
-              className="text-2xl md:text-3xl font-bold line-through opacity-60"
-              style={{ color: 'var(--neutral-400)' }}
-            >
-              $997
-            </span>
-            <span 
-              className="text-4xl md:text-5xl font-bold"
-              style={{ color: 'var(--brand-200)' }}
-            >
-              $329
-            </span>
-          </div>
-          <p className="text-lg md:text-xl" style={{ color: 'var(--white)' }}>
-            Save <span style={{ color: 'var(--brand-200)' }} className="font-bold">$668</span> — Offer ends in:
-          </p>
+          <span className="text-sm sm:text-base" style={{ color: 'var(--white)' }}>
+            Offer ends in:
+          </span>
         </div>
 
-        {/* Countdown Timer */}
-        <div className="grid grid-cols-4 gap-3 md:gap-4">
-          <div 
-            className="rounded-xl p-4 md:p-6 text-center"
-            style={{
-              background: 'var(--alpha-white-10)',
-              borderColor: 'var(--alpha-white-10)'
-            }}
-          >
-            <div 
-              className="text-3xl md:text-5xl font-bold mb-2"
-              style={{ color: 'var(--brand-200)' }}
-            >
+        {/* Right: Countdown */}
+        <div className="flex items-center gap-2 sm:gap-3">
+          <div className="text-center">
+            <div className="text-xl sm:text-2xl font-bold" style={{ color: 'var(--brand-200)' }}>
               {String(timeLeft.days).padStart(2, '0')}
             </div>
-            <div 
-              className="text-xs md:text-sm font-medium"
-              style={{ color: 'var(--neutral-400)' }}
-            >
+            <div className="text-[10px] sm:text-xs font-medium" style={{ color: 'var(--neutral-400)' }}>
               DAYS
             </div>
           </div>
+          <span className="text-xl font-bold" style={{ color: 'var(--neutral-400)' }}>:</span>
           
-          <div 
-            className="rounded-xl p-4 md:p-6 text-center"
-            style={{
-              background: 'var(--alpha-white-10)',
-              borderColor: 'var(--alpha-white-10)'
-            }}
-          >
-            <div 
-              className="text-3xl md:text-5xl font-bold mb-2"
-              style={{ color: 'var(--brand-200)' }}
-            >
+          <div className="text-center">
+            <div className="text-xl sm:text-2xl font-bold" style={{ color: 'var(--brand-200)' }}>
               {String(timeLeft.hours).padStart(2, '0')}
             </div>
-            <div 
-              className="text-xs md:text-sm font-medium"
-              style={{ color: 'var(--neutral-400)' }}
-            >
-              HOURS
+            <div className="text-[10px] sm:text-xs font-medium" style={{ color: 'var(--neutral-400)' }}>
+              HRS
             </div>
           </div>
+          <span className="text-xl font-bold" style={{ color: 'var(--neutral-400)' }}>:</span>
           
-          <div 
-            className="rounded-xl p-4 md:p-6 text-center"
-            style={{
-              background: 'var(--alpha-white-10)',
-              borderColor: 'var(--alpha-white-10)'
-            }}
-          >
-            <div 
-              className="text-3xl md:text-5xl font-bold mb-2"
-              style={{ color: 'var(--brand-200)' }}
-            >
+          <div className="text-center">
+            <div className="text-xl sm:text-2xl font-bold" style={{ color: 'var(--brand-200)' }}>
               {String(timeLeft.minutes).padStart(2, '0')}
             </div>
-            <div 
-              className="text-xs md:text-sm font-medium"
-              style={{ color: 'var(--neutral-400)' }}
-            >
-              MINUTES
+            <div className="text-[10px] sm:text-xs font-medium" style={{ color: 'var(--neutral-400)' }}>
+              MIN
             </div>
           </div>
+          <span className="text-xl font-bold" style={{ color: 'var(--neutral-400)' }}>:</span>
           
-          <div 
-            className="rounded-xl p-4 md:p-6 text-center"
-            style={{
-              background: 'var(--alpha-white-10)',
-              borderColor: 'var(--alpha-white-10)'
-            }}
-          >
-            <div 
-              className="text-3xl md:text-5xl font-bold mb-2"
-              style={{ color: 'var(--brand-200)' }}
-            >
+          <div className="text-center">
+            <div className="text-xl sm:text-2xl font-bold" style={{ color: 'var(--brand-200)' }}>
               {String(timeLeft.seconds).padStart(2, '0')}
             </div>
-            <div 
-              className="text-xs md:text-sm font-medium"
-              style={{ color: 'var(--neutral-400)' }}
-            >
-              SECONDS
+            <div className="text-[10px] sm:text-xs font-medium" style={{ color: 'var(--neutral-400)' }}>
+              SEC
             </div>
           </div>
         </div>
