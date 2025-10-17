@@ -3,40 +3,28 @@ import { motion } from "framer-motion";
 
 const videos = [
   {
-    src: "/video1.mp4",
-    poster: "/video1-poster.jpg",
-    title: "Dr. Sarah Chen - $400K Revenue Story",
-    description: "How Pacific Smile Center transformed their practice"
+    src: "/VIDS /Doc 2_v1.mp4",
+    poster: "/VIDS /Doc 2_v1-poster.jpg",
+    title: "Doctor Testimonial",
+    description: "Real practice transformation story"
   },
   {
-    src: "/video2.mp4", 
-    poster: "/video2-poster.jpg",
-    title: "Dr. Michael Stevens - Full-Arch Success",
-    description: "Advanced Dental Implants case study"
+    src: "/VIDS /Nancy Testimnonial-1.mp4", 
+    poster: "/VIDS /Nancy Testimnonial-1-poster.jpg",
+    title: "Nancy Testimonial",
+    description: "Patient success story"
   },
   {
-    src: "/video3.mp4",
-    poster: "/video3-poster.jpg", 
-    title: "Dr. James Rodriguez - Patient Quality",
-    description: "Elite Implant Solutions testimonial"
+    src: "/VIDS /Q-2 final copy.mp4",
+    poster: "/VIDS /Q-2 final copy-poster.jpg", 
+    title: "Q2 Results",
+    description: "Quarterly performance review"
   },
   {
-    src: "/video4.mp4",
-    poster: "/video4-poster.jpg",
-    title: "Practice Transformation",
-    description: "Before and after results"
-  },
-  {
-    src: "/video5.mp4",
-    poster: "/video5-poster.jpg",
-    title: "Content Creation Process",
-    description: "How we create winning posts"
-  },
-  {
-    src: "/video6.mp4",
-    poster: "/video6-poster.jpg",
-    title: "Ad Performance Results",
-    description: "Real campaign analytics"
+    src: "/VIDS /VID_4f copy.mp4",
+    poster: "/VIDS /VID_4f copy-poster.jpg",
+    title: "Practice Success",
+    description: "Full-arch case study"
   }
 ];
 
