@@ -72,7 +72,7 @@ export default function SocialProof() {
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 viewport={{ once: true }}
               >
-                <div className="relative w-40 h-30 sm:w-56 sm:h-42 md:w-64 md:h-48 rounded-2xl overflow-hidden group cursor-pointer">
+                <div className="relative w-56 h-42 sm:w-64 sm:h-48 md:w-72 md:h-54 rounded-2xl overflow-hidden group cursor-pointer">
                   <img
                     src={image.src}
                     alt={image.alt}
@@ -94,7 +94,7 @@ export default function SocialProof() {
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 viewport={{ once: true }}
               >
-                <div className="relative w-40 h-30 sm:w-56 sm:h-42 md:w-64 md:h-48 rounded-2xl overflow-hidden group cursor-pointer">
+                <div className="relative w-56 h-42 sm:w-64 sm:h-48 md:w-72 md:h-54 rounded-2xl overflow-hidden group cursor-pointer">
                   <img
                     src={image.src}
                     alt={image.alt}
