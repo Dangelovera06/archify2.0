@@ -93,13 +93,13 @@ export default function Proof() {
         </div>
 
         {/* Testimonials - Horizontal Slider */}
-        <div className="relative">
-          <div className="flex animate-scroll-reviews overflow-x-auto scrollbar-hide">
+        <div className="relative overflow-x-auto">
+          <div className="flex animate-scroll-reviews scrollbar-hide min-w-max">
             {/* First set of testimonials */}
             {testimonials.map((testimonial, index) => (
               <motion.div
                 key={`first-${index}`}
-                className="flex-shrink-0 mx-1 sm:mx-3 w-52 sm:w-64"
+                className="flex-shrink-0 mx-1 sm:mx-3 w-48 sm:w-64"
                 initial={{ opacity: 0, scale: 0.8 }}
                 whileInView={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
@@ -138,7 +138,7 @@ export default function Proof() {
             {testimonials.map((testimonial, index) => (
               <motion.div
                 key={`second-${index}`}
-                className="flex-shrink-0 mx-1 sm:mx-3 w-52 sm:w-64"
+                className="flex-shrink-0 mx-1 sm:mx-3 w-48 sm:w-64"
                 initial={{ opacity: 0, scale: 0.8 }}
                 whileInView={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}

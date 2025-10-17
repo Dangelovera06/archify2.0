@@ -60,19 +60,19 @@ export default function SocialProof() {
         </motion.div>
 
         {/* Continuous Horizontal Slider */}
-        <div className="relative">
-          <div className="flex animate-scroll overflow-x-auto scrollbar-hide">
+        <div className="relative overflow-x-auto">
+          <div className="flex animate-scroll scrollbar-hide min-w-max">
             {/* First set of images */}
             {socialProofImages.map((image, index) => (
               <motion.div
                 key={`first-${index}`}
-                className="flex-shrink-0 mx-2 sm:mx-4"
+                className="flex-shrink-0 mx-1 sm:mx-4"
                 initial={{ opacity: 0, scale: 0.8 }}
                 whileInView={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 viewport={{ once: true }}
               >
-                <div className="relative w-48 h-36 sm:w-56 sm:h-42 md:w-64 md:h-48 rounded-2xl overflow-hidden group cursor-pointer">
+                <div className="relative w-40 h-30 sm:w-56 sm:h-42 md:w-64 md:h-48 rounded-2xl overflow-hidden group cursor-pointer">
                   <img
                     src={image.src}
                     alt={image.alt}
@@ -88,13 +88,13 @@ export default function SocialProof() {
             {socialProofImages.map((image, index) => (
               <motion.div
                 key={`second-${index}`}
-                className="flex-shrink-0 mx-2 sm:mx-4"
+                className="flex-shrink-0 mx-1 sm:mx-4"
                 initial={{ opacity: 0, scale: 0.8 }}
                 whileInView={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 viewport={{ once: true }}
               >
-                <div className="relative w-48 h-36 sm:w-56 sm:h-42 md:w-64 md:h-48 rounded-2xl overflow-hidden group cursor-pointer">
+                <div className="relative w-40 h-30 sm:w-56 sm:h-42 md:w-64 md:h-48 rounded-2xl overflow-hidden group cursor-pointer">
                   <img
                     src={image.src}
                     alt={image.alt}
