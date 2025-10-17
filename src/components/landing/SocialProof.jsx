@@ -61,33 +61,10 @@ export default function SocialProof() {
 
         {/* Continuous Horizontal Slider */}
         <div className="relative overflow-x-auto">
-          <div className="flex animate-scroll scrollbar-hide min-w-max">
-            {/* First set of images */}
+          <div className="flex animate-scroll scrollbar-hide">
             {socialProofImages.map((image, index) => (
               <motion.div
-                key={`first-${index}`}
-                className="flex-shrink-0 mx-1 sm:mx-4"
-                initial={{ opacity: 0, scale: 0.8 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-                viewport={{ once: true }}
-              >
-                <div className="relative w-64 h-48 sm:w-72 sm:h-54 md:w-80 md:h-60 rounded-2xl overflow-hidden group cursor-pointer">
-                  <img
-                    src={image.src}
-                    alt={image.alt}
-                    className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
-                    loading="lazy"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                </div>
-              </motion.div>
-            ))}
-            
-            {/* Duplicate set for seamless loop */}
-            {socialProofImages.map((image, index) => (
-              <motion.div
-                key={`second-${index}`}
+                key={index}
                 className="flex-shrink-0 mx-1 sm:mx-4"
                 initial={{ opacity: 0, scale: 0.8 }}
                 whileInView={{ opacity: 1, scale: 1 }}
@@ -115,12 +92,13 @@ export default function SocialProof() {
             transform: translateX(0);
           }
           100% {
-            transform: translateX(-50%);
+            transform: translateX(-100%);
           }
         }
         
         .animate-scroll {
           animation: scroll 25s linear infinite;
+          width: max-content;
         }
         
         .animate-scroll:hover {
