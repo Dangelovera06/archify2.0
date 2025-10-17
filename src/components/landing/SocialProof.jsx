@@ -3,34 +3,34 @@ import { motion } from "framer-motion";
 
 const socialProofImages = [
   {
-    src: "/team1.jpg",
-    alt: "Dental team at Advanced Implant Center",
-    title: "Advanced Implant Center Team"
-  },
-  {
-    src: "/team2.jpg", 
-    alt: "Medical aesthetics team at Refresh Palm Beach",
-    title: "Refresh Palm Beach Medical Aesthetics"
-  },
-  {
-    src: "/team3.jpg",
-    alt: "Dental practice team",
+    src: "/3.jpg",
+    alt: "Dental team at practice",
     title: "Elite Dental Practice Team"
   },
   {
-    src: "/team4.jpg",
+    src: "/4.jpg", 
+    alt: "Medical aesthetics team",
+    title: "Refresh Palm Beach Medical Aesthetics"
+  },
+  {
+    src: "/5.jpg",
     alt: "Implant specialists team",
     title: "Implant Specialists Team"
   },
   {
-    src: "/team5.jpg",
+    src: "/6.jpg",
     alt: "Full-arch restoration team",
     title: "Full-Arch Restoration Team"
   },
   {
-    src: "/team6.jpg",
-    alt: "Cosmetic dentistry team",
-    title: "Cosmetic Dentistry Team"
+    src: "/3.jpg",
+    alt: "Dental team at practice",
+    title: "Elite Dental Practice Team"
+  },
+  {
+    src: "/4.jpg",
+    alt: "Medical aesthetics team",
+    title: "Refresh Palm Beach Medical Aesthetics"
   }
 ];
 
