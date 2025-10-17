@@ -35,7 +35,10 @@ export default function Landing() {
             <div className="hidden md:flex items-center gap-6 lg:gap-8">
               <a href="#proof" className="text-sm transition-colors hover:text-white" style={{ color: 'var(--neutral-400)' }}>Results</a>
               <a href="#blueprint" className="text-sm transition-colors hover:text-white" style={{ color: 'var(--neutral-400)' }}>How It Works</a>
-              <button
+              <a
+                href="https://whop.com/checkout/plan_uSIx6iByd4a9F?d2c=true"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="relative inline-flex items-center justify-center gap-2 rounded-xl px-4 sm:px-6 py-2 text-black transition-all active:translate-y-px active:scale-[0.99] hover:saturate-110 hover:brightness-105 text-sm"
                 style={{
                   background: "linear-gradient(290deg, #ffd999 0%, #ffb433 30.2857%, #f5d49a 67.2878%, #ffb433 100%)",
@@ -57,7 +60,7 @@ export default function Landing() {
                 <span className="relative font-semibold leading-relaxed whitespace-nowrap">
                   Get Started
                 </span>
-              </button>
+              </a>
             </div>
             <div className="md:hidden">
               <DropdownMenu>
@@ -93,7 +96,7 @@ export default function Landing() {
                     How It Works
                   </DropdownMenuItem>
                   <DropdownMenuItem 
-                    onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+                    onClick={() => window.open('https://whop.com/checkout/plan_uSIx6iByd4a9F?d2c=true', '_blank')}
                     className="cursor-pointer"
                     style={{ color: 'var(--neutral-300)' }}
                   >
