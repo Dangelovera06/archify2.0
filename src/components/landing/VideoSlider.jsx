@@ -3,26 +3,22 @@ import { motion } from "framer-motion";
 
 const videos = [
   {
-    src: "/VIDS /Doc 2_v1.mp4",
-    poster: "/VIDS /Doc 2_v1-poster.jpg",
+    src: "https://www.youtube.com/embed/YOUR_VIDEO_ID_1",
     title: "Doctor Testimonial",
     description: "Real practice transformation story"
   },
   {
-    src: "/VIDS /Nancy Testimnonial-1.mp4", 
-    poster: "/VIDS /Nancy Testimnonial-1-poster.jpg",
+    src: "https://www.youtube.com/embed/YOUR_VIDEO_ID_2", 
     title: "Nancy Testimonial",
     description: "Patient success story"
   },
   {
-    src: "/VIDS /Q-2 final copy.mp4",
-    poster: "/VIDS /Q-2 final copy-poster.jpg", 
+    src: "https://www.youtube.com/embed/YOUR_VIDEO_ID_3",
     title: "Q2 Results",
     description: "Quarterly performance review"
   },
   {
-    src: "/VIDS /VID_4f copy.mp4",
-    poster: "/VIDS /VID_4f copy-poster.jpg",
+    src: "https://www.youtube.com/embed/YOUR_VIDEO_ID_4",
     title: "Practice Success",
     description: "Full-arch case study"
   }
@@ -67,18 +63,14 @@ export default function VideoSlider() {
                 viewport={{ once: true }}
               >
                 <div className="relative w-64 h-48 sm:w-72 sm:h-54 md:w-80 md:h-60 rounded-2xl overflow-hidden group cursor-pointer">
-                  <video
-                    className="w-full h-full object-cover"
-                    poster={video.poster}
-                    muted
-                    loop
-                    playsInline
-                    onMouseEnter={(e) => e.target.play()}
-                    onMouseLeave={(e) => e.target.pause()}
-                  >
-                    <source src={video.src} type="video/mp4" />
-                    Your browser does not support the video tag.
-                  </video>
+                  <iframe
+                    className="w-full h-full"
+                    src={video.src}
+                    title={video.title}
+                    frameBorder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowFullScreen
+                  ></iframe>
                   
                   {/* Video overlay with title */}
                   <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
@@ -108,18 +100,14 @@ export default function VideoSlider() {
                 viewport={{ once: true }}
               >
                 <div className="relative w-64 h-48 sm:w-72 sm:h-54 md:w-80 md:h-60 rounded-2xl overflow-hidden group cursor-pointer">
-                  <video
-                    className="w-full h-full object-cover"
-                    poster={video.poster}
-                    muted
-                    loop
-                    playsInline
-                    onMouseEnter={(e) => e.target.play()}
-                    onMouseLeave={(e) => e.target.pause()}
-                  >
-                    <source src={video.src} type="video/mp4" />
-                    Your browser does not support the video tag.
-                  </video>
+                  <iframe
+                    className="w-full h-full"
+                    src={video.src}
+                    title={video.title}
+                    frameBorder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowFullScreen
+                  ></iframe>
                   
                   {/* Video overlay with title */}
                   <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
