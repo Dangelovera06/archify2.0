@@ -37,7 +37,7 @@ export default function Landing() {
               <a href="#proof" className="text-sm transition-colors hover:text-white" style={{ color: 'var(--neutral-400)' }}>Results</a>
               <a href="#blueprint" className="text-sm transition-colors hover:text-white" style={{ color: 'var(--neutral-400)' }}>How It Works</a>
               <a
-                href="https://whop.com/archify-io/social-media-dental-blueprint/"
+                href="https://whop.com/checkout/plan_uSIx6iByd4a9F?d2c=true"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="relative inline-flex items-center justify-center gap-2 rounded-xl px-4 sm:px-6 py-2 text-black transition-all active:translate-y-px active:scale-[0.99] hover:saturate-110 hover:brightness-105 text-sm"
@@ -97,7 +97,7 @@ export default function Landing() {
                     How It Works
                   </DropdownMenuItem>
                   <DropdownMenuItem 
-                    onClick={() => window.open('https://whop.com/archify-io/social-media-dental-blueprint/', '_blank')}
+                    onClick={() => window.open('https://whop.com/checkout/plan_uSIx6iByd4a9F?d2c=true', '_blank')}
                     className="cursor-pointer"
                     style={{ color: 'var(--neutral-300)' }}
                   >
