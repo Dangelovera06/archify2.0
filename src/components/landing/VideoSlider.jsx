@@ -3,22 +3,22 @@ import { motion } from "framer-motion";
 
 const videos = [
   {
-    src: "https://www.youtube.com/embed/uQINcOvA1nU?rel=0&modestbranding=1",
+    src: "https://www.youtube.com/embed/uQINcOvA1nU?rel=0&modestbranding=1&showinfo=0&controls=0&disablekb=1",
     title: "Doctor Testimonial",
     description: "Real practice transformation story"
   },
   {
-    src: "https://www.youtube.com/embed/XxUT6tmzq-k?rel=0&modestbranding=1", 
+    src: "https://www.youtube.com/embed/XxUT6tmzq-k?rel=0&modestbranding=1&showinfo=0&controls=0&disablekb=1", 
     title: "Nancy Testimonial",
     description: "Patient success story"
   },
   {
-    src: "https://www.youtube.com/embed/uQINcOvA1nU?rel=0&modestbranding=1",
+    src: "https://www.youtube.com/embed/uQINcOvA1nU?rel=0&modestbranding=1&showinfo=0&controls=0&disablekb=1",
     title: "Q2 Results",
     description: "Quarterly performance review"
   },
   {
-    src: "https://www.youtube.com/embed/XxUT6tmzq-k?rel=0&modestbranding=1",
+    src: "https://www.youtube.com/embed/XxUT6tmzq-k?rel=0&modestbranding=1&showinfo=0&controls=0&disablekb=1",
     title: "Practice Success",
     description: "Full-arch case study"
   }
@@ -79,13 +79,6 @@ export default function VideoSlider() {
                     <h3 className="text-sm font-semibold mb-1">{video.title}</h3>
                     <p className="text-xs">{video.description}</p>
                   </div>
-                  
-                  {/* Play button overlay */}
-                  <div className="absolute inset-0 flex items-center justify-center opacity-70 group-hover:opacity-100 transition-opacity duration-300">
-                    <div className="w-12 h-12 sm:w-16 sm:h-16 rounded-full bg-gray-500/30 backdrop-blur-sm flex items-center justify-center">
-                      <div className="w-0 h-0 border-l-[8px] sm:border-l-[12px] border-l-gray-400 border-y-[6px] sm:border-y-[8px] border-y-transparent ml-1"></div>
-                    </div>
-                  </div>
                 </div>
               </motion.div>
             ))}
@@ -116,13 +109,6 @@ export default function VideoSlider() {
                   <div className="absolute bottom-0 left-0 right-0 p-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                     <h3 className="text-sm font-semibold mb-1">{video.title}</h3>
                     <p className="text-xs">{video.description}</p>
-                  </div>
-                  
-                  {/* Play button overlay */}
-                  <div className="absolute inset-0 flex items-center justify-center opacity-70 group-hover:opacity-100 transition-opacity duration-300">
-                    <div className="w-12 h-12 sm:w-16 sm:h-16 rounded-full bg-gray-500/30 backdrop-blur-sm flex items-center justify-center">
-                      <div className="w-0 h-0 border-l-[8px] sm:border-l-[12px] border-l-gray-400 border-y-[6px] sm:border-y-[8px] border-y-transparent ml-1"></div>
-                    </div>
                   </div>
                 </div>
               </motion.div>
