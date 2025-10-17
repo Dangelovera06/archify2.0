@@ -16,11 +16,6 @@ const videos = [
     src: "https://www.youtube.com/embed/9CzZ9LRWr8s?rel=0&modestbranding=1&showinfo=0&controls=0&disablekb=1",
     title: "",
     description: ""
-  },
-  {
-    src: "https://www.youtube.com/embed/uQINcOvA1nU?rel=0&modestbranding=1&showinfo=0&controls=0&disablekb=1",
-    title: "",
-    description: ""
   }
 ];
 
