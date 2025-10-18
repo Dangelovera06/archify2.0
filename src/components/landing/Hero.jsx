@@ -5,7 +5,7 @@ import PricingBadge from './PricingBadge';
 
 export default function Hero() {
   return (
-    <section className="relative pt-32 md:pt-40 pb-16 md:pb-24 overflow-hidden">
+    <section className="relative pt-16 md:pt-24 pb-16 md:pb-24 overflow-hidden">
       {/* Gradient Glow */}
       <div className="absolute inset-0 -z-10">
         <div 
@@ -70,14 +70,9 @@ export default function Hero() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.3 }}
-            className="inline-flex flex-col sm:flex-row items-center gap-2 sm:gap-3 px-3 sm:px-6 py-2.5 sm:py-3 rounded-full mx-4"
-            style={{
-              backgroundColor: 'var(--alpha-white-5)',
-              border: '1px solid var(--alpha-white-10)'
-            }}
+            className="flex items-center justify-center gap-2 mx-4"
           >
-            <Shield className="w-4 h-4 flex-shrink-0" style={{ color: 'var(--brand-200)' }} />
-            <span className="text-xs sm:text-sm text-center sm:text-left" style={{ color: 'var(--white)' }}>
+            <span className="text-xs sm:text-sm" style={{ color: 'var(--neutral-400)' }}>
               Trusted by leading implant practices nationwide
             </span>
             <div className="flex gap-0.5">

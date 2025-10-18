@@ -31,7 +31,7 @@ export default function Landing() {
       <CountdownTimer />
       
       {/* Navigation */}
-      <nav className="fixed top-0 left-0 right-0 z-50 backdrop-blur-xl w-full" style={{ backgroundColor: 'var(--alpha-white-5)', borderBottom: '1px solid var(--alpha-white-10)' }}>
+      <nav className="relative z-40 backdrop-blur-xl w-full mt-10" style={{ backgroundColor: 'var(--alpha-white-5)', borderBottom: '1px solid var(--alpha-white-10)' }}>
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
           <div className="flex items-center justify-between h-16 sm:h-20">
             <div className="text-xl sm:text-2xl" style={{ color: 'var(--white)', fontFamily: 'var(--font-display)' }}>
