@@ -63,21 +63,23 @@ export default function Hero() {
             </a>
           </div>
 
-          <PricingBadge />
+          <div className="mb-6 md:mb-8">
+            <PricingBadge />
+          </div>
 
           {/* Trust Badge */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.3 }}
-            className="flex items-center justify-center gap-2 mx-4"
+            className="flex items-center justify-center gap-2 sm:gap-3 mx-4"
           >
-            <span className="text-xs sm:text-sm" style={{ color: 'var(--neutral-400)' }}>
+            <span className="text-sm sm:text-base md:text-lg" style={{ color: 'var(--neutral-400)' }}>
               Trusted by leading implant practices nationwide
             </span>
-            <div className="flex gap-0.5">
+            <div className="flex gap-0.5 sm:gap-1">
               {[...Array(5)].map((_, i) => (
-                <Star key={i} className="w-3 h-3 sm:w-4 sm:h-4 fill-current" style={{ color: 'var(--brand-200)' }} />
+                <Star key={i} className="w-4 h-4 sm:w-5 sm:h-5 fill-current" style={{ color: 'var(--brand-200)' }} />
               ))}
             </div>
           </motion.div>
