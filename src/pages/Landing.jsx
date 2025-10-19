@@ -116,10 +116,10 @@ export default function Landing() {
       </nav>
 
       <Hero />
+      <Testimonials />
       <HardTruth />
       <SocialProof />
       <VideoSlider />
-      <Testimonials />
       <EmotionalCore />
       <Proof />
       <Blueprint />
