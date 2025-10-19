@@ -16,6 +16,7 @@ import Proof from "../components/landing/Proof";
 import Blueprint from "../components/landing/Blueprint";
 import FinalClose from "../components/landing/FinalClose";
 import CountdownTimer from "../components/landing/CountdownTimer";
+import Testimonials from "../components/landing/Testimonials";
 
 export default function Landing() {
   const scrollToSection = (sectionId) => {
@@ -118,6 +119,7 @@ export default function Landing() {
       <HardTruth />
       <SocialProof />
       <VideoSlider />
+      <Testimonials />
       <EmotionalCore />
       <Proof />
       <Blueprint />
