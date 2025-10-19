@@ -33,6 +33,13 @@ export default function Hero() {
             Turn social media into 20+ implant consults in 14 days — and add $500K+ in predictable revenue
           </p>
 
+          {/* VSL Video */}
+          <div className="mb-8 md:mb-12 max-w-4xl mx-auto px-4 w-full">
+            <div className="relative rounded-xl overflow-hidden" style={{ boxShadow: '0 20px 60px rgba(0, 0, 0, 0.4)' }}>
+              <wistia-player media-id="wnxtau4o6k" aspect="1.7777777777777777"></wistia-player>
+            </div>
+          </div>
+
           <div className="flex flex-col items-center gap-4 md:gap-6 mb-6 md:mb-8 px-4">
             <a
               href="https://whop.com/checkout/plan_uSIx6iByd4a9F?d2c=true"
