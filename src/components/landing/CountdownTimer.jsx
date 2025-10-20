@@ -44,13 +44,34 @@ export default function CountdownTimer() {
       background: 'var(--black)',
       borderBottom: '1px solid var(--alpha-white-10)'
     }}>
-      <div className="max-w-7xl mx-auto flex items-center justify-center gap-3 text-sm sm:text-base md:text-lg">
-        <span style={{ color: 'var(--white)' }}>
-          Offer ends in:
-        </span>
-        <span className="font-bold text-base sm:text-lg md:text-xl tabular-nums" style={{ color: 'var(--brand-200)' }}>
-          {formatTime()}
-        </span>
+      <div className="max-w-7xl mx-auto flex items-center justify-center sm:justify-between gap-3 sm:gap-6 flex-wrap">
+        <div className="flex items-center gap-3 text-sm sm:text-base md:text-lg">
+          <span style={{ color: 'var(--white)' }}>
+            Offer ends in:
+          </span>
+          <span className="font-bold text-base sm:text-lg md:text-xl tabular-nums" style={{ color: 'var(--brand-200)' }}>
+            {formatTime()}
+          </span>
+        </div>
+        
+        <a
+          href="https://whop.com/checkout/plan_uSIx6iByd4a9F?d2c=true"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="relative inline-flex items-center justify-center gap-2 rounded-lg px-5 py-2.5 text-black transition-all active:translate-y-px active:scale-[0.99] hover:saturate-110 hover:brightness-105 text-sm sm:text-base font-semibold whitespace-nowrap"
+          style={{
+            background: "linear-gradient(290deg, #ffd999 0%, #ffb433 30.2857%, #f5d49a 67.2878%, #ffb433 100%)",
+            boxShadow: "0 1px 0 rgba(0,0,0,.08)"
+          }}
+        >
+          <span 
+            className="pointer-events-none absolute inset-0 rounded-lg blur-[8px] opacity-40"
+            style={{
+              background: "radial-gradient(50% 50% at 50% 50%, #ffc766 0%, rgba(0,0,0,0) 100%)"
+            }}
+          />
+          <span className="relative">Join Now</span>
+        </a>
       </div>
     </div>
   );
