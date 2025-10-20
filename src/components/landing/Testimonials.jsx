@@ -95,14 +95,14 @@ const testimonialsRow2 = [
 
 export default function Testimonials() {
   return (
-    <section id="testimonials" className="py-16 md:py-24 overflow-hidden">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="testimonials" className="py-16 md:py-24 overflow-hidden w-full">
+      <div className="w-full">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
-          className="text-center mb-12"
+          className="text-center mb-12 px-4 sm:px-6 lg:px-8"
         >
           <div className="inline-block mb-4">
             <span 
@@ -125,15 +125,15 @@ export default function Testimonials() {
         </motion.div>
 
         {/* First Row - Scrolling Left */}
-        <div className="relative overflow-hidden mb-6">
-          <div className="flex animate-scroll-left gap-4">
+        <div className="relative overflow-hidden mb-4 md:mb-6 w-full">
+          <div className="flex animate-scroll-left gap-3 md:gap-4">
             {[...testimonialsRow1, ...testimonialsRow1].map((testimonial, index) => (
               <div
                 key={`row1-${index}`}
                 className="flex-shrink-0"
               >
                 <Card 
-                  className="w-80 p-6 rounded-2xl transition-all duration-300 hover:scale-[1.02]"
+                  className="w-72 sm:w-80 p-5 sm:p-6 rounded-2xl transition-all duration-300 hover:scale-[1.02]"
                   style={{
                     backgroundColor: 'var(--alpha-white-5)',
                     border: '1px solid var(--alpha-white-10)'
@@ -175,15 +175,15 @@ export default function Testimonials() {
         </div>
 
         {/* Second Row - Scrolling Right */}
-        <div className="relative overflow-hidden">
-          <div className="flex animate-scroll-right gap-4">
+        <div className="relative overflow-hidden w-full">
+          <div className="flex animate-scroll-right gap-3 md:gap-4">
             {[...testimonialsRow2, ...testimonialsRow2].map((testimonial, index) => (
               <div
                 key={`row2-${index}`}
                 className="flex-shrink-0"
               >
                 <Card 
-                  className="w-80 p-6 rounded-2xl transition-all duration-300 hover:scale-[1.02]"
+                  className="w-72 sm:w-80 p-5 sm:p-6 rounded-2xl transition-all duration-300 hover:scale-[1.02]"
                   style={{
                     backgroundColor: 'var(--alpha-white-5)',
                     border: '1px solid var(--alpha-white-10)'
