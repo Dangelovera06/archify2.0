@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
-import { ArrowRight, Star, Shield } from "lucide-react";
+import { ArrowRight, Star, Shield, CheckCircle } from "lucide-react";
 import PricingBadge from './PricingBadge';
 
 export default function Hero() {
@@ -116,6 +116,30 @@ export default function Hero() {
           <div className="mb-6 md:mb-8">
             <PricingBadge />
           </div>
+
+          {/* Money Back Guarantee */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            className="mb-6 md:mb-8 px-4"
+          >
+            <div className="inline-flex items-center gap-3 px-6 py-4 rounded-2xl" style={{
+              backgroundColor: 'var(--alpha-white-5)',
+              border: '1px solid var(--alpha-white-10)'
+            }}>
+              <Shield className="w-6 h-6 sm:w-7 sm:h-7 flex-shrink-0" style={{ color: 'var(--brand-200)' }} />
+              <div className="text-left">
+                <div className="font-bold text-sm sm:text-base md:text-lg" style={{ color: 'var(--white)' }}>
+                  30-Day Money Back Guarantee
+                </div>
+                <div className="text-xs sm:text-sm" style={{ color: 'var(--neutral-400)' }}>
+                  Not satisfied? Get a full refund, no questions asked.
+                </div>
+              </div>
+              <CheckCircle className="w-5 h-5 sm:w-6 sm:h-6 flex-shrink-0" style={{ color: 'var(--brand-200)' }} />
+            </div>
+          </motion.div>
 
           {/* Trust Badge */}
           <motion.div
