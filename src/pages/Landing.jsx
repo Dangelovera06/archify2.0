@@ -14,41 +14,8 @@ import Testimonials from "../components/landing/Testimonials";
 export default function Landing() {
   return (
     <div className="min-h-screen overflow-x-hidden w-full" style={{ backgroundColor: 'var(--neutral-950)' }}>
-      {/* Floating Countdown Timer */}
+      {/* Combined Header with Countdown Timer */}
       <CountdownTimer />
-      
-      {/* Navigation */}
-      <nav className="relative z-40 backdrop-blur-xl w-full mt-12 sm:mt-14" style={{ backgroundColor: 'var(--alpha-white-5)', borderBottom: '1px solid var(--alpha-white-10)' }}>
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
-          <div className="flex items-center justify-between h-16 sm:h-20">
-            <div className="text-xl sm:text-2xl" style={{ color: 'var(--white)', fontFamily: 'var(--font-display)' }}>
-              Archify.io
-            </div>
-            <div className="flex items-center">
-              <a
-                href="https://whop.com/checkout/plan_uSIx6iByd4a9F?d2c=true"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="relative inline-flex items-center justify-center gap-2 rounded-xl px-4 sm:px-6 py-2.5 text-black transition-all active:translate-y-px active:scale-[0.99] hover:saturate-110 hover:brightness-105 text-sm sm:text-base font-semibold"
-                style={{
-                  background: "linear-gradient(290deg, #ffd999 0%, #ffb433 30.2857%, #f5d49a 67.2878%, #ffb433 100%)",
-                  boxShadow: "0 1px 0 rgba(0,0,0,.08)"
-                }}
-              >
-                <span 
-                  className="pointer-events-none absolute inset-0 rounded-xl blur-[10px] opacity-40"
-                  style={{
-                    background: "radial-gradient(50% 50% at 50% 50%, #ffc766 0%, rgba(0,0,0,0) 100%)"
-                  }}
-                />
-                <span className="relative leading-relaxed whitespace-nowrap">
-                  Join Now
-                </span>
-              </a>
-            </div>
-          </div>
-        </div>
-      </nav>
 
       <Hero />
       <Testimonials />

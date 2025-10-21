@@ -40,25 +40,32 @@ export default function CountdownTimer() {
   };
 
   return (
-    <div className="fixed top-0 left-0 right-0 z-50 px-4 py-3 sm:py-4" style={{
+    <div className="fixed top-0 left-0 right-0 z-50 px-4 py-3 sm:py-4 backdrop-blur-xl" style={{
       background: 'var(--black)',
       borderBottom: '1px solid var(--alpha-white-10)'
     }}>
-      <div className="max-w-7xl mx-auto flex items-center justify-center sm:justify-between gap-3 sm:gap-6 flex-wrap">
-        <div className="flex items-center gap-3 text-sm sm:text-base md:text-lg">
+      <div className="max-w-7xl mx-auto flex items-center justify-between gap-4 flex-wrap sm:flex-nowrap">
+        {/* Logo/Brand Name */}
+        <div className="text-lg sm:text-xl md:text-2xl font-semibold whitespace-nowrap" style={{ color: 'var(--white)', fontFamily: 'var(--font-display)' }}>
+          Archify.io
+        </div>
+        
+        {/* Countdown Timer */}
+        <div className="flex items-center gap-2 sm:gap-3 text-xs sm:text-sm md:text-base order-3 sm:order-2 w-full sm:w-auto justify-center">
           <span style={{ color: 'var(--white)' }}>
             Offer ends in:
           </span>
-          <span className="font-bold text-base sm:text-lg md:text-xl tabular-nums" style={{ color: 'var(--brand-200)' }}>
+          <span className="font-bold text-sm sm:text-base md:text-lg tabular-nums" style={{ color: 'var(--brand-200)' }}>
             {formatTime()}
           </span>
         </div>
         
+        {/* CTA Button */}
         <a
           href="https://whop.com/checkout/plan_uSIx6iByd4a9F?d2c=true"
           target="_blank"
           rel="noopener noreferrer"
-          className="relative inline-flex items-center justify-center gap-2 rounded-lg px-5 py-2.5 text-black transition-all active:translate-y-px active:scale-[0.99] hover:saturate-110 hover:brightness-105 text-sm sm:text-base font-semibold whitespace-nowrap"
+          className="relative inline-flex items-center justify-center gap-2 rounded-lg px-4 sm:px-5 py-2 sm:py-2.5 text-black transition-all active:translate-y-px active:scale-[0.99] hover:saturate-110 hover:brightness-105 text-sm sm:text-base font-semibold whitespace-nowrap order-2 sm:order-3"
           style={{
             background: "linear-gradient(290deg, #ffd999 0%, #ffb433 30.2857%, #f5d49a 67.2878%, #ffb433 100%)",
             boxShadow: "0 1px 0 rgba(0,0,0,.08)"

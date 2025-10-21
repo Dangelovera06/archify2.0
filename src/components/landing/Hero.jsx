@@ -5,7 +5,7 @@ import PricingBadge from './PricingBadge';
 
 export default function Hero() {
   return (
-    <section className="relative pt-16 md:pt-24 pb-16 md:pb-24 overflow-hidden">
+    <section className="relative pt-24 md:pt-32 pb-16 md:pb-24 overflow-hidden">
       {/* Gradient Glow */}
       <div className="absolute inset-0 -z-10">
         <div 
