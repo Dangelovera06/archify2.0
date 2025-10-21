@@ -31,12 +31,8 @@ export default function CountdownTimer() {
   }, []);
 
   const formatTime = () => {
-    const parts = [];
-    if (timeLeft.days > 0) parts.push(`${timeLeft.days}d`);
-    parts.push(`${timeLeft.hours}h`);
-    parts.push(`${timeLeft.minutes}m`);
-    parts.push(`${timeLeft.seconds}s`);
-    return parts.join(' ');
+    const totalHours = (timeLeft.days * 24) + timeLeft.hours;
+    return `${totalHours}hrs ${timeLeft.minutes}mins ${timeLeft.seconds}secs`;
   };
 
   return (
@@ -44,18 +40,18 @@ export default function CountdownTimer() {
       background: 'var(--black)',
       borderBottom: '1px solid var(--alpha-white-10)'
     }}>
-      <div className="max-w-7xl mx-auto flex items-center justify-between gap-4 flex-wrap sm:flex-nowrap">
+      <div className="max-w-7xl mx-auto flex items-center justify-between gap-2 sm:gap-4">
         {/* Logo/Brand Name */}
-        <div className="text-lg sm:text-xl md:text-2xl font-semibold whitespace-nowrap" style={{ color: 'var(--white)', fontFamily: 'var(--font-display)' }}>
+        <div className="text-base sm:text-xl md:text-2xl font-semibold whitespace-nowrap flex-shrink-0" style={{ color: 'var(--white)', fontFamily: 'var(--font-display)' }}>
           Archify.io
         </div>
         
         {/* Countdown Timer */}
-        <div className="flex items-center gap-2 sm:gap-3 text-xs sm:text-sm md:text-base order-3 sm:order-2 w-full sm:w-auto justify-center">
-          <span className="font-semibold" style={{ color: 'var(--white)' }}>
+        <div className="flex items-center gap-1 sm:gap-2 text-[10px] sm:text-sm md:text-base flex-shrink min-w-0">
+          <span className="font-semibold hidden sm:inline" style={{ color: 'var(--white)' }}>
             Offer ends in:
           </span>
-          <span className="font-extrabold text-sm sm:text-base md:text-lg tabular-nums" style={{ color: 'var(--brand-200)' }}>
+          <span className="font-extrabold text-[10px] sm:text-base md:text-lg tabular-nums whitespace-nowrap" style={{ color: 'var(--brand-200)' }}>
             {formatTime()}
           </span>
         </div>
@@ -65,7 +61,7 @@ export default function CountdownTimer() {
           href="https://whop.com/checkout/plan_uSIx6iByd4a9F?d2c=true"
           target="_blank"
           rel="noopener noreferrer"
-          className="relative inline-flex items-center justify-center gap-2 rounded-lg px-4 sm:px-5 py-2 sm:py-2.5 text-black transition-all active:translate-y-px active:scale-[0.99] hover:saturate-110 hover:brightness-105 text-sm sm:text-base font-semibold whitespace-nowrap order-2 sm:order-3"
+          className="relative inline-flex items-center justify-center gap-2 rounded-lg px-3 sm:px-5 py-1.5 sm:py-2.5 text-black transition-all active:translate-y-px active:scale-[0.99] hover:saturate-110 hover:brightness-105 text-xs sm:text-base font-semibold whitespace-nowrap flex-shrink-0"
           style={{
             background: "linear-gradient(290deg, #ffd999 0%, #ffb433 30.2857%, #f5d49a 67.2878%, #ffb433 100%)",
             boxShadow: "0 1px 0 rgba(0,0,0,.08)"
