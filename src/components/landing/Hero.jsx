@@ -1,9 +1,42 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { ArrowRight, Star, Shield } from "lucide-react";
 import PricingBadge from './PricingBadge';
 
 export default function Hero() {
+  const [timeLeft, setTimeLeft] = useState({ days: 0, hours: 0, minutes: 0, seconds: 0 });
+
+  useEffect(() => {
+    const targetDate = new Date();
+    targetDate.setDate(targetDate.getDate() + 2);
+
+    const calculateTimeLeft = () => {
+      const now = new Date();
+      const difference = targetDate - now;
+
+      if (difference > 0) {
+        const days = Math.floor(difference / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((difference / (1000 * 60 * 60)) % 24);
+        const minutes = Math.floor((difference / 1000 / 60) % 60);
+        const seconds = Math.floor((difference / 1000) % 60);
+
+        setTimeLeft({ days, hours, minutes, seconds });
+      } else {
+        setTimeLeft({ days: 0, hours: 0, minutes: 0, seconds: 0 });
+      }
+    };
+
+    calculateTimeLeft();
+    const timer = setInterval(calculateTimeLeft, 1000);
+
+    return () => clearInterval(timer);
+  }, []);
+
+  const formatTime = () => {
+    const totalHours = (timeLeft.days * 24) + timeLeft.hours;
+    return `${totalHours}hrs ${timeLeft.minutes}mins ${timeLeft.seconds}secs`;
+  };
+
   return (
     <section className="relative pt-24 md:pt-32 pb-16 md:pb-24 overflow-hidden">
       {/* Gradient Glow */}
@@ -68,6 +101,16 @@ export default function Hero() {
                 <ArrowRight className="w-5 h-5 md:w-6 md:h-6 flex-shrink-0" />
               </span>
             </a>
+            
+            {/* Countdown Timer Under CTA */}
+            <div className="flex items-center justify-center gap-2 text-sm sm:text-base md:text-lg">
+              <span className="font-semibold" style={{ color: 'var(--white)' }}>
+                Offer ends in:
+              </span>
+              <span className="font-extrabold tabular-nums" style={{ color: 'var(--brand-200)' }}>
+                {formatTime()}
+              </span>
+            </div>
           </div>
 
           <div className="mb-6 md:mb-8">
