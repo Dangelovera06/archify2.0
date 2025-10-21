@@ -52,10 +52,10 @@ export default function CountdownTimer() {
         
         {/* Countdown Timer */}
         <div className="flex items-center gap-2 sm:gap-3 text-xs sm:text-sm md:text-base order-3 sm:order-2 w-full sm:w-auto justify-center">
-          <span style={{ color: 'var(--white)' }}>
+          <span className="font-semibold" style={{ color: 'var(--white)' }}>
             Offer ends in:
           </span>
-          <span className="font-bold text-sm sm:text-base md:text-lg tabular-nums" style={{ color: 'var(--brand-200)' }}>
+          <span className="font-extrabold text-sm sm:text-base md:text-lg tabular-nums" style={{ color: 'var(--brand-200)' }}>
             {formatTime()}
           </span>
         </div>
