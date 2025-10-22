@@ -10,7 +10,7 @@ const struggles = [
 
 export default function EmotionalCore() {
   return (
-    <section className="py-32">
+    <section className="py-32 bg-neutral-950">
       <div className="max-w-4xl mx-auto px-6 lg:px-8 text-center">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -19,17 +19,17 @@ export default function EmotionalCore() {
           viewport={{ once: true }}
         >
           <div className="inline-flex items-center gap-3 mb-8">
-            <Heart className="w-6 h-6" style={{ color: 'var(--brand-200)' }} />
-            <span className="caption" style={{ color: 'var(--brand-300)' }}>
+            <Heart className="w-6 h-6 text-yellow-400" />
+            <span className="text-sm uppercase tracking-wider text-yellow-400">
               The Emotional Core
             </span>
           </div>
 
-          <h2 className="heading-2 mb-8" style={{ color: 'var(--white)' }}>
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-8 text-white">
             Behind Every Consult Is Someone Who Feels Trapped
           </h2>
 
-          <p className="body-large mb-12" style={{ color: 'var(--white)' }}>
+          <p className="text-lg md:text-xl mb-12 text-white/80">
             Patients in your city are silently living with:
           </p>
 
@@ -41,28 +41,18 @@ export default function EmotionalCore() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 viewport={{ once: true }}
-                className="p-6 rounded-2xl text-center"
-                style={{
-                  backgroundColor: 'var(--alpha-white-5)',
-                  border: '1px solid var(--alpha-white-10)'
-                }}
+                className="p-6 rounded-2xl text-center bg-white/[0.02] border border-white/10 backdrop-blur-sm"
               >
-                <p className="body-large" style={{ color: 'var(--neutral-200)' }}>
+                <p className="text-lg text-white/80">
                   {struggle}
                 </p>
               </motion.div>
             ))}
           </div>
 
-          <div className="p-10 rounded-3xl" style={{
-            background: 'linear-gradient(135deg, var(--alpha-white-5) 0%, var(--alpha-white-10) 100%)',
-            border: '1px solid var(--alpha-white-20)'
-          }}>
-            <p className="heading-3 mb-4" style={{ color: 'var(--brand-200)' }}>
-              Your practice can give them confidence, freedom, and health.
-            </p>
-            <p className="body-large" style={{ color: 'var(--white)' }}>
-              Archify.io makes sure they find you first.
+          <div className="p-10 rounded-3xl bg-gradient-to-br from-white/[0.05] to-white/[0.02] border border-white/20">
+            <p className="text-xl md:text-2xl font-semibold text-white/90">
+              Your content should speak to their pain — not your equipment.
             </p>
           </div>
         </motion.div>

@@ -4,17 +4,7 @@ import { ArrowRight, Smartphone } from "lucide-react";
 
 export default function FinalClose() {
   return (
-    <section className="py-24 md:py-32 relative overflow-hidden">
-      <div className="absolute inset-0 -z-10">
-        <div 
-          className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[1200px] h-[800px] rounded-full blur-[160px]" 
-          style={{ 
-            background: 'radial-gradient(circle, var(--brand-300) 0%, transparent 70%)',
-            opacity: 0.15
-          }}
-        ></div>
-      </div>
-
+    <section className="py-24 md:py-32 relative overflow-hidden bg-neutral-950">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -23,28 +13,28 @@ export default function FinalClose() {
           viewport={{ once: true }}
         >
           <div className="inline-flex items-center gap-3 mb-6 md:mb-8">
-            <Smartphone className="w-5 h-5 sm:w-6 sm:h-6" style={{ color: 'var(--brand-200)' }} />
-            <span className="text-xs sm:text-sm uppercase tracking-wider" style={{ color: 'var(--brand-300)' }}>
+            <Smartphone className="w-5 h-5 sm:w-6 sm:h-6 text-yellow-400" />
+            <span className="text-xs sm:text-sm uppercase tracking-wider text-yellow-400">
               Final Close
             </span>
           </div>
 
-          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl mb-6 md:mb-8 px-2" style={{ color: 'var(--white)', fontFamily: 'var(--font-display)' }}>
+          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-6 md:mb-8 px-2 text-white">
             Your Next Implant Patient Is Scrolling Right Now
           </h2>
 
-          <p className="text-xl sm:text-2xl md:text-3xl mb-8 md:mb-12 px-4" style={{ color: 'var(--white)', fontFamily: 'var(--font-display)' }}>
+          <p className="text-xl sm:text-2xl md:text-3xl font-semibold mb-8 md:mb-12 px-4 text-white">
             The Only Question: Will They Find You?
           </p>
 
           <div className="space-y-4 md:space-y-6 mb-8 md:mb-12 max-w-2xl mx-auto px-4">
-            <p className="text-base sm:text-lg md:text-xl" style={{ color: 'var(--white)' }}>
+            <p className="text-base sm:text-lg md:text-xl text-white/80">
               You've seen the proof. You've read the reviews. You know what this system can do.
             </p>
-            <p className="text-base sm:text-lg md:text-xl" style={{ color: 'var(--white)' }}>
+            <p className="text-base sm:text-lg md:text-xl text-white/80">
               The practices that win in 2025 aren't the ones who post the most.
             </p>
-            <p className="text-base sm:text-lg md:text-xl font-semibold" style={{ color: 'var(--white)' }}>
+            <p className="text-base sm:text-lg md:text-xl font-semibold text-white">
               They're the ones who own the scroll.
             </p>
           </div>
@@ -61,13 +51,13 @@ export default function FinalClose() {
               }}
             >
               <span 
-                className="pointer-events-none absolute inset-0 rounded-full blur-[10px] opacity-40"
+                className="pointer-events-none absolute inset-0 rounded-xl blur-[10px] opacity-40"
                 style={{
                   background: "radial-gradient(50% 50% at 50% 50%, #ffc766 0%, rgba(0,0,0,0) 100%)"
                 }}
               />
               <span 
-                className="pointer-events-none absolute inset-0 rounded-full blur-[10px]"
+                className="pointer-events-none absolute inset-0 rounded-xl blur-[10px]"
                 style={{
                   background: "radial-gradient(50% 50% at 50% 50%, #ffd999 0%, rgba(0,0,0,0) 100%)"
                 }}
@@ -79,7 +69,7 @@ export default function FinalClose() {
             </a>
           </div>
 
-          <p className="text-xs sm:text-sm px-4" style={{ color: 'var(--neutral-500)' }}>
+          <p className="text-xs sm:text-sm px-4 text-white/50">
             No contracts. No hidden fees. Just results.
           </p>
         </motion.div>

@@ -36,7 +36,7 @@ const socialProofImages = [
 
 export default function SocialProof() {
   return (
-    <section className="py-16 md:py-24 relative">
+    <section className="py-16 md:py-24 relative bg-neutral-950">
       <div className="max-w-6xl mx-auto px-2 sm:px-4 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -46,15 +46,16 @@ export default function SocialProof() {
           className="text-center mb-12"
         >
           <div className="inline-flex items-center gap-3 mb-6">
-            <span className="caption" style={{ color: 'var(--brand-300)' }}>
+            <span className="h-1.5 w-1.5 rounded-full bg-yellow-400" />
+            <span className="text-sm uppercase tracking-wider text-yellow-400">
               Trusted Nationwide
             </span>
           </div>
           
-          <h2 className="text-2xl sm:text-3xl md:text-4xl mb-4" style={{ color: 'var(--white)', fontFamily: 'var(--font-display)' }}>
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-4 text-white">
             Practices Using Our Method
           </h2>
-          <p className="text-base sm:text-lg" style={{ color: 'var(--white)' }}>
+          <p className="text-base sm:text-lg md:text-xl text-white/70">
             See the teams behind $40M+ in implant revenue
           </p>
         </motion.div>
@@ -72,7 +73,7 @@ export default function SocialProof() {
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 viewport={{ once: true }}
               >
-                <div className="relative w-64 h-48 sm:w-72 sm:h-54 md:w-80 md:h-60 rounded-2xl overflow-hidden group cursor-pointer">
+                <div className="relative w-64 h-48 sm:w-72 sm:h-54 md:w-80 md:h-60 rounded-2xl overflow-hidden group cursor-pointer ring-1 ring-white/10">
                   <img
                     src={image.src}
                     alt={image.alt}
@@ -89,12 +90,8 @@ export default function SocialProof() {
               <motion.div
                 key={`second-${index}`}
                 className="flex-shrink-0 mx-1 sm:mx-4"
-                initial={{ opacity: 0, scale: 0.8 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-                viewport={{ once: true }}
               >
-                <div className="relative w-64 h-48 sm:w-72 sm:h-54 md:w-80 md:h-60 rounded-2xl overflow-hidden group cursor-pointer">
+                <div className="relative w-64 h-48 sm:w-72 sm:h-54 md:w-80 md:h-60 rounded-2xl overflow-hidden group cursor-pointer ring-1 ring-white/10">
                   <img
                     src={image.src}
                     alt={image.alt}
@@ -125,15 +122,6 @@ export default function SocialProof() {
         
         .animate-scroll:hover {
           animation-play-state: paused;
-        }
-        
-        .scrollbar-hide {
-          -ms-overflow-style: none;
-          scrollbar-width: none;
-        }
-        
-        .scrollbar-hide::-webkit-scrollbar {
-          display: none;
         }
       `}</style>
     </section>

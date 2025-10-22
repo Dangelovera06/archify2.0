@@ -22,7 +22,7 @@ const steps = [
 
 export default function Blueprint() {
   return (
-    <section id="blueprint" className="py-24 md:py-32">
+    <section id="blueprint" className="py-24 md:py-32 bg-neutral-950">
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -32,19 +32,12 @@ export default function Blueprint() {
           className="text-center mb-16 md:mb-20"
         >
           <div className="inline-block mb-6">
-            <span 
-              className="caption px-4 sm:px-6 py-2 rounded-full text-xs sm:text-sm"
-              style={{ 
-                backgroundColor: 'var(--alpha-white-5)', 
-                color: 'var(--brand-300)',
-                border: '1px solid var(--alpha-white-10)'
-              }}
-            >
+            <span className="px-4 sm:px-6 py-2 rounded-full text-xs sm:text-sm bg-white/[0.03] text-yellow-400 border border-white/10 uppercase tracking-wider">
               The Blueprint
             </span>
           </div>
 
-          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl mb-6 md:mb-8 px-4" style={{ color: 'var(--white)', fontFamily: 'var(--font-display)' }}>
+          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-6 md:mb-8 px-4 text-white">
             Three Simple Steps to Predictable Implant Growth
           </h2>
         </motion.div>
@@ -59,35 +52,19 @@ export default function Blueprint() {
               viewport={{ once: true }}
               className="relative"
             >
-              <div 
-                className="absolute -top-3 -left-3 w-10 h-10 sm:w-12 sm:h-12 rounded-full flex items-center justify-center text-xl sm:text-2xl font-bold"
-                style={{ 
-                  backgroundColor: 'var(--brand-200)',
-                  color: 'var(--black)',
-                  fontFamily: 'var(--font-display)'
-                }}
-              >
+              <div className="absolute -top-3 -left-3 w-10 h-10 sm:w-12 sm:h-12 rounded-full flex items-center justify-center text-xl sm:text-2xl font-bold bg-yellow-400 text-black">
                 {index + 1}
               </div>
 
-              <div 
-                className="p-6 sm:p-8 rounded-3xl text-center h-full pt-10 sm:pt-12"
-                style={{
-                  backgroundColor: 'var(--alpha-white-5)',
-                  border: '1px solid var(--alpha-white-10)'
-                }}
-              >
-                <div 
-                  className="inline-flex p-3 sm:p-4 rounded-full mb-4 sm:mb-6"
-                  style={{ backgroundColor: 'var(--alpha-white-10)' }}
-                >
-                  <step.icon className="w-6 h-6 sm:w-8 sm:h-8" style={{ color: 'var(--brand-200)' }} />
+              <div className="p-6 sm:p-8 rounded-3xl text-center h-full pt-10 sm:pt-12 bg-white/[0.02] border border-white/10 backdrop-blur-sm">
+                <div className="inline-flex p-3 sm:p-4 rounded-full mb-4 sm:mb-6 bg-white/[0.05]">
+                  <step.icon className="w-6 h-6 sm:w-8 sm:h-8 text-yellow-400" />
                 </div>
 
-                <h3 className="text-xl sm:text-2xl mb-3 sm:mb-4" style={{ color: 'var(--white)', fontFamily: 'var(--font-display)' }}>
+                <h3 className="text-xl sm:text-2xl font-bold mb-3 sm:mb-4 text-white">
                   {step.title}
                 </h3>
-                <p className="text-sm sm:text-base" style={{ color: 'var(--white)' }}>
+                <p className="text-sm sm:text-base text-white/70">
                   {step.description}
                 </p>
               </div>
@@ -98,36 +75,18 @@ export default function Blueprint() {
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
+          transition={{ duration: 0.6, delay: 0.5 }}
           viewport={{ once: true }}
-          className="text-center px-4"
+          className="text-center"
         >
-            <a
-              href="https://whop.com/checkout/plan_uSIx6iByd4a9F?d2c=true"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="relative w-full sm:w-auto inline-flex items-center justify-center gap-2 sm:gap-3 rounded-xl px-6 sm:px-8 md:px-10 py-4 sm:py-5 md:py-6 text-black transition-all active:translate-y-px active:scale-[0.99] hover:saturate-110 hover:brightness-105"
-              style={{
-                background: "linear-gradient(290deg, #ffd999 0%, #ffb433 30.2857%, #f5d49a 67.2878%, #ffb433 100%)",
-                boxShadow: "0 1px 0 rgba(0,0,0,.08)"
-              }}
-            >
-            <span 
-              className="pointer-events-none absolute inset-0 rounded-full blur-[10px] opacity-40"
-              style={{
-                background: "radial-gradient(50% 50% at 50% 50%, #ffc766 0%, rgba(0,0,0,0) 100%)"
-              }}
-            />
-            <span 
-              className="pointer-events-none absolute inset-0 rounded-full blur-[10px]"
-              style={{
-                background: "radial-gradient(50% 50% at 50% 50%, #ffd999 0%, rgba(0,0,0,0) 100%)"
-              }}
-            />
-            <span className="relative font-semibold text-sm sm:text-base md:text-lg lg:text-xl leading-relaxed whitespace-nowrap flex items-center justify-center gap-2">
-              <span>Claim the Blueprint Now</span>
-              <ArrowRight className="w-5 h-5 md:w-6 md:h-6 flex-shrink-0" />
-            </span>
+          <a
+            href="https://whop.com/checkout/plan_uSIx6iByd4a9F?d2c=true"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-3 px-8 py-5 rounded-xl bg-gradient-to-r from-yellow-300 via-yellow-400 to-yellow-300 text-black font-bold text-lg shadow-2xl hover:shadow-yellow-400/50 transition-all duration-300 hover:scale-105"
+          >
+            <span>Start Your Blueprint Today</span>
+            <ArrowRight className="w-6 h-6" />
           </a>
         </motion.div>
       </div>

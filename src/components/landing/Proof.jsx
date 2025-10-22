@@ -32,17 +32,7 @@ const testimonials = [
 
 export default function Proof() {
   return (
-    <section id="proof" className="py-32 relative">
-      <div className="absolute inset-0 -z-10">
-        <div 
-          className="absolute bottom-0 right-1/4 w-[700px] h-[700px] rounded-full blur-[130px]" 
-          style={{ 
-            background: 'radial-gradient(circle, var(--brand-300) 0%, transparent 70%)',
-            opacity: 0.1
-          }}
-        ></div>
-      </div>
-
+    <section id="proof" className="py-32 relative bg-neutral-950">
       <div className="max-w-6xl mx-auto px-2 sm:px-4 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -52,13 +42,13 @@ export default function Proof() {
           className="text-center mb-20"
         >
           <div className="inline-flex items-center gap-3 mb-8">
-            <TrendingUp className="w-6 h-6" style={{ color: 'var(--brand-200)' }} />
-            <span className="caption" style={{ color: 'var(--brand-300)' }}>
+            <TrendingUp className="w-6 h-6 text-yellow-400" />
+            <span className="text-sm uppercase tracking-wider text-yellow-400">
               Real Results
             </span>
           </div>
 
-          <h2 className="heading-2 mb-6" style={{ color: 'var(--white)' }}>
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-6 text-white">
             Practices Using Archify.io Are Seeing $250K–$500K+ in New Implant Revenue
           </h2>
         </motion.div>
@@ -72,20 +62,16 @@ export default function Proof() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
               viewport={{ once: true }}
-              className="text-center p-8 rounded-3xl"
-              style={{
-                backgroundColor: 'var(--alpha-white-5)',
-                border: '1px solid var(--alpha-white-10)'
-              }}
+              className="text-center p-8 rounded-3xl bg-white/[0.02] border border-white/10 backdrop-blur-sm"
             >
-              <CheckCircle className="w-12 h-12 mx-auto mb-6" style={{ color: 'var(--brand-200)' }} />
-              <div className="heading-2 mb-2" style={{ color: 'var(--brand-200)' }}>
+              <CheckCircle className="w-12 h-12 mx-auto mb-6 text-yellow-400" />
+              <div className="text-4xl md:text-5xl font-bold mb-2 text-yellow-400">
                 {stat.number}
               </div>
-              <div className="body font-semibold mb-2" style={{ color: 'var(--white)' }}>
+              <div className="text-lg font-semibold mb-2 text-white">
                 {stat.label}
               </div>
-              <div className="body-small" style={{ color: 'var(--neutral-400)' }}>
+              <div className="text-sm text-white/60">
                 {stat.sublabel}
               </div>
             </motion.div>
@@ -106,27 +92,23 @@ export default function Proof() {
                 viewport={{ once: true }}
               >
                 <Card 
-                  className="p-3 sm:p-6 rounded-2xl h-full"
-                  style={{
-                    backgroundColor: 'var(--alpha-white-5)',
-                    border: '1px solid var(--alpha-white-10)'
-                  }}
+                  className="p-3 sm:p-6 rounded-2xl h-full bg-white/[0.02] border border-white/10 backdrop-blur-sm"
                 >
                   <div className="flex justify-center mb-3">
                     {[...Array(testimonial.rating)].map((_, i) => (
-                      <Star key={i} className="w-3 h-3 sm:w-4 sm:h-4 fill-current" style={{ color: 'var(--brand-200)' }} />
+                      <Star key={i} className="w-3 h-3 sm:w-4 sm:h-4 fill-current text-yellow-400" />
                     ))}
                   </div>
 
-                  <p className="text-xs sm:text-sm mb-4 sm:mb-6 leading-relaxed" style={{ color: 'var(--neutral-200)', fontStyle: 'italic' }}>
+                  <p className="text-xs sm:text-sm mb-4 sm:mb-6 leading-relaxed text-white/80 italic">
                     "{testimonial.quote}"
                   </p>
 
-                  <div className="text-center pt-3 sm:pt-4" style={{ borderTop: '1px solid var(--alpha-white-10)' }}>
-                    <div className="text-xs sm:text-sm font-semibold mb-1" style={{ color: 'var(--white)' }}>
+                  <div className="text-center pt-3 sm:pt-4 border-t border-white/10">
+                    <div className="text-xs sm:text-sm font-semibold mb-1 text-white">
                       {testimonial.author}
                     </div>
-                    <div className="text-xs" style={{ color: 'var(--neutral-500)' }}>
+                    <div className="text-xs text-white/50">
                       {testimonial.practice}
                     </div>
                   </div>
@@ -139,33 +121,25 @@ export default function Proof() {
               <motion.div
                 key={`second-${index}`}
                 className="flex-shrink-0 mx-1 sm:mx-3 w-48 sm:w-64"
-                initial={{ opacity: 0, scale: 0.8 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-                viewport={{ once: true }}
               >
                 <Card 
-                  className="p-3 sm:p-6 rounded-2xl h-full"
-                  style={{
-                    backgroundColor: 'var(--alpha-white-5)',
-                    border: '1px solid var(--alpha-white-10)'
-                  }}
+                  className="p-3 sm:p-6 rounded-2xl h-full bg-white/[0.02] border border-white/10 backdrop-blur-sm"
                 >
                   <div className="flex justify-center mb-3">
                     {[...Array(testimonial.rating)].map((_, i) => (
-                      <Star key={i} className="w-3 h-3 sm:w-4 sm:h-4 fill-current" style={{ color: 'var(--brand-200)' }} />
+                      <Star key={i} className="w-3 h-3 sm:w-4 sm:h-4 fill-current text-yellow-400" />
                     ))}
                   </div>
 
-                  <p className="text-xs sm:text-sm mb-4 sm:mb-6 leading-relaxed" style={{ color: 'var(--neutral-200)', fontStyle: 'italic' }}>
+                  <p className="text-xs sm:text-sm mb-4 sm:mb-6 leading-relaxed text-white/80 italic">
                     "{testimonial.quote}"
                   </p>
 
-                  <div className="text-center pt-3 sm:pt-4" style={{ borderTop: '1px solid var(--alpha-white-10)' }}>
-                    <div className="text-xs sm:text-sm font-semibold mb-1" style={{ color: 'var(--white)' }}>
+                  <div className="text-center pt-3 sm:pt-4 border-t border-white/10">
+                    <div className="text-xs sm:text-sm font-semibold mb-1 text-white">
                       {testimonial.author}
                     </div>
-                    <div className="text-xs" style={{ color: 'var(--neutral-500)' }}>
+                    <div className="text-xs text-white/50">
                       {testimonial.practice}
                     </div>
                   </div>
