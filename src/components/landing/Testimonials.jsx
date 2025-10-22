@@ -1,262 +1,124 @@
 import React from "react";
-import { Card } from "@/components/ui/card";
 import { motion } from "framer-motion";
-import { Star } from "lucide-react";
+import { TestimonialsColumn } from "@/components/ui/testimonials-columns";
 
-const testimonialsRow1 = [
+const testimonials = [
   {
+    text: "Went from 3 consults per month to 23 in just 30 days. The ROI is absolutely incredible. This blueprint completely transformed our practice.",
+    image: "https://randomuser.me/api/portraits/women/44.jpg",
     name: "Dr. Sarah Mitchell",
     role: "Premier Dental Implants",
-    content: "Went from 3 consults/month to 23 in just 30 days. The ROI is incredible.",
-    rating: 5,
-    avatar: "SM"
   },
   {
+    text: "Added $847K in revenue this year alone. Best investment we've made for our practice. The system is foolproof and delivers consistent results.",
+    image: "https://randomuser.me/api/portraits/men/32.jpg",
     name: "Dr. James Chen",
     role: "Advanced Oral Surgery",
-    content: "Added $847K in revenue this year alone. Best investment we've made.",
-    rating: 5,
-    avatar: "JC"
   },
   {
+    text: "Social media finally works for us. We're getting 15+ quality implant leads every single week now. Game-changing results.",
+    image: "https://randomuser.me/api/portraits/women/65.jpg",
     name: "Dr. Emily Rodriguez",
     role: "Full Arch Solutions",
-    content: "Social media finally works. 15+ quality implant leads weekly now.",
-    rating: 5,
-    avatar: "ER"
   },
   {
+    text: "Our calendar is fully booked 6 weeks out now. This blueprint changed everything about how we attract and convert patients.",
+    image: "https://randomuser.me/api/portraits/men/52.jpg",
     name: "Dr. Michael Thompson",
     role: "Dental Excellence Group",
-    content: "Our calendar is fully booked 6 weeks out. This blueprint changed everything.",
-    rating: 5,
-    avatar: "MT"
   },
   {
+    text: "We've completed 42 full-arch cases in just 4 months. The growth has been absolutely unbelievable and continues to accelerate.",
+    image: "https://randomuser.me/api/portraits/women/68.jpg",
     name: "Dr. Lisa Martinez",
     role: "Smile Restoration Center",
-    content: "We've done 42 full-arch cases in 4 months. Unbelievable growth.",
-    rating: 5,
-    avatar: "LM"
   },
   {
+    text: "Finally have predictable patient flow. No more marketing guesswork or wasted ad spend. Everything is systematic and scalable.",
+    image: "https://randomuser.me/api/portraits/men/46.jpg",
     name: "Dr. Robert Kim",
     role: "Elite Implant Specialists",
-    content: "Predictable patient flow. No more marketing guesswork or wasted ad spend.",
-    rating: 5,
-    avatar: "RK"
-  }
-];
-
-const testimonialsRow2 = [
+  },
   {
+    text: "$1.2M revenue increase in just 8 months. The system just works. Simple to implement and incredibly effective.",
+    image: "https://randomuser.me/api/portraits/women/72.jpg",
     name: "Dr. Amanda Foster",
     role: "Coastal Dental Implants",
-    content: "$1.2M revenue increase in 8 months. The system just works.",
-    rating: 5,
-    avatar: "AF"
   },
   {
+    text: "Went from struggling to survive to 30+ monthly consults. We finally cracked the code on digital marketing that actually converts.",
+    image: "https://randomuser.me/api/portraits/men/58.jpg",
     name: "Dr. David Park",
     role: "Precision Oral Surgery",
-    content: "From struggling to 30+ monthly consults. Finally cracked the code.",
-    rating: 5,
-    avatar: "DP"
   },
   {
+    text: "Best decision for our practice. Quality patients who are ready to move forward, not tire-kickers. The ROI speaks for itself.",
+    image: "https://randomuser.me/api/portraits/women/79.jpg",
     name: "Dr. Jennifer Blake",
     role: "Modern Implant Studio",
-    content: "Best decision for our practice. Quality patients who are ready to move forward.",
-    rating: 5,
-    avatar: "JB"
   },
-  {
-    name: "Dr. Christopher Lee",
-    role: "Advanced Dental Care",
-    content: "Doubled our implant revenue in 90 days. The blueprint is foolproof.",
-    rating: 5,
-    avatar: "CL"
-  },
-  {
-    name: "Dr. Rachel Green",
-    role: "Premier Oral Surgery",
-    content: "Went from barely surviving to thriving. 25+ consults monthly now.",
-    rating: 5,
-    avatar: "RG"
-  },
-  {
-    name: "Dr. Kevin Wu",
-    role: "Full Arch Institute",
-    content: "Social media finally generates real revenue. $600K+ in new cases.",
-    rating: 5,
-    avatar: "KW"
-  }
 ];
+
+const firstColumn = testimonials.slice(0, 3);
+const secondColumn = testimonials.slice(3, 6);
+const thirdColumn = testimonials.slice(6, 9);
 
 export default function Testimonials() {
   return (
-    <section id="testimonials" className="py-16 md:py-24 overflow-hidden w-full">
-      <div className="w-full">
+    <section className="bg-[#030303] py-20 relative overflow-hidden">
+      {/* Background gradient */}
+      <div className="absolute inset-0 bg-gradient-to-br from-purple-500/[0.03] via-transparent to-indigo-500/[0.03]" />
+
+      <div className="container z-10 mx-auto px-4 relative">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
+          transition={{ duration: 0.8, delay: 0.1, ease: [0.16, 1, 0.3, 1] }}
           viewport={{ once: true }}
-          className="text-center mb-12 px-4 sm:px-6 lg:px-8"
+          className="flex flex-col items-center justify-center max-w-[640px] mx-auto"
         >
-          <div className="inline-block mb-4">
-            <span 
-              className="text-sm px-4 py-2 rounded-full"
-              style={{ 
-                backgroundColor: 'var(--alpha-white-5)', 
-                color: 'var(--brand-300)',
-                border: '1px solid var(--alpha-white-10)'
-              }}
-            >
-              Success Stories
-            </span>
+          <div className="flex justify-center mb-6">
+            <div className="inline-flex items-center gap-2 border border-white/10 bg-white/[0.02] py-2 px-4 rounded-full backdrop-blur-sm">
+              <div className="w-2 h-2 rounded-full bg-purple-500"></div>
+              <span className="text-sm text-white/60 tracking-wide">Success Stories</span>
+            </div>
           </div>
-          <h2 className="text-3xl sm:text-4xl md:text-5xl mb-4" style={{ color: 'var(--white)', fontFamily: 'var(--font-display)' }}>
-            Real Doctors. Real Results.
+
+          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-center mb-6">
+            <span className="bg-clip-text text-transparent bg-gradient-to-b from-white to-white/80">
+              Real Doctors.
+            </span>
+            <br />
+            <span className="bg-clip-text text-transparent bg-gradient-to-r from-purple-300 via-white/90 to-indigo-300">
+              Real Results.
+            </span>
           </h2>
-          <p className="text-lg max-w-2xl mx-auto" style={{ color: 'var(--neutral-400)' }}>
+          
+          <p className="text-center text-base md:text-lg text-white/50 leading-relaxed">
             See what practice owners are saying about their transformation
           </p>
         </motion.div>
 
-        {/* First Row - Scrolling Left */}
-        <div className="relative overflow-hidden mb-4 md:mb-6 w-full">
-          <div className="flex animate-scroll-left gap-3 md:gap-4">
-            {[...testimonialsRow1, ...testimonialsRow1].map((testimonial, index) => (
-              <div
-                key={`row1-${index}`}
-                className="flex-shrink-0"
-              >
-                <Card 
-                  className="w-72 sm:w-80 p-5 sm:p-6 rounded-2xl transition-all duration-300 hover:scale-[1.02]"
-                  style={{
-                    backgroundColor: 'var(--alpha-white-5)',
-                    border: '1px solid var(--alpha-white-10)'
-                  }}
-                >
-                  <div className="flex justify-start mb-3 gap-1">
-                    {[...Array(testimonial.rating)].map((_, i) => (
-                      <Star key={i} className="w-4 h-4 fill-current" style={{ color: 'var(--brand-200)' }} />
-                    ))}
-                  </div>
-
-                  <p className="text-sm mb-4 leading-relaxed" style={{ color: 'var(--neutral-300)' }}>
-                    "{testimonial.content}"
-                  </p>
-
-                  <div className="flex items-center gap-3">
-                    <div 
-                      className="w-10 h-10 rounded-full flex items-center justify-center text-sm font-medium flex-shrink-0"
-                      style={{ 
-                        backgroundColor: 'var(--alpha-white-10)',
-                        color: 'var(--brand-200)'
-                      }}
-                    >
-                      {testimonial.avatar}
-                    </div>
-                    <div className="min-w-0">
-                      <div className="text-sm font-medium truncate" style={{ color: 'var(--white)' }}>
-                        {testimonial.name}
-                      </div>
-                      <div className="text-xs truncate" style={{ color: 'var(--neutral-500)' }}>
-                        {testimonial.role}
-                      </div>
-                    </div>
-                  </div>
-                </Card>
-              </div>
-            ))}
-          </div>
-        </div>
-
-        {/* Second Row - Scrolling Right */}
-        <div className="relative overflow-hidden w-full">
-          <div className="flex animate-scroll-right gap-3 md:gap-4">
-            {[...testimonialsRow2, ...testimonialsRow2].map((testimonial, index) => (
-              <div
-                key={`row2-${index}`}
-                className="flex-shrink-0"
-              >
-                <Card 
-                  className="w-72 sm:w-80 p-5 sm:p-6 rounded-2xl transition-all duration-300 hover:scale-[1.02]"
-                  style={{
-                    backgroundColor: 'var(--alpha-white-5)',
-                    border: '1px solid var(--alpha-white-10)'
-                  }}
-                >
-                  <div className="flex justify-start mb-3 gap-1">
-                    {[...Array(testimonial.rating)].map((_, i) => (
-                      <Star key={i} className="w-4 h-4 fill-current" style={{ color: 'var(--brand-200)' }} />
-                    ))}
-                  </div>
-
-                  <p className="text-sm mb-4 leading-relaxed" style={{ color: 'var(--neutral-300)' }}>
-                    "{testimonial.content}"
-                  </p>
-
-                  <div className="flex items-center gap-3">
-                    <div 
-                      className="w-10 h-10 rounded-full flex items-center justify-center text-sm font-medium flex-shrink-0"
-                      style={{ 
-                        backgroundColor: 'var(--alpha-white-10)',
-                        color: 'var(--brand-200)'
-                      }}
-                    >
-                      {testimonial.avatar}
-                    </div>
-                    <div className="min-w-0">
-                      <div className="text-sm font-medium truncate" style={{ color: 'var(--white)' }}>
-                        {testimonial.name}
-                      </div>
-                      <div className="text-xs truncate" style={{ color: 'var(--neutral-500)' }}>
-                        {testimonial.role}
-                      </div>
-                    </div>
-                  </div>
-                </Card>
-              </div>
-            ))}
-          </div>
-        </div>
+        <motion.div
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.3, ease: [0.16, 1, 0.3, 1] }}
+          viewport={{ once: true }}
+          className="flex justify-center gap-6 mt-16 [mask-image:linear-gradient(to_bottom,transparent,black_15%,black_85%,transparent)] max-h-[740px] overflow-hidden"
+        >
+          <TestimonialsColumn testimonials={firstColumn} duration={15} />
+          <TestimonialsColumn 
+            testimonials={secondColumn} 
+            className="hidden md:block" 
+            duration={19} 
+          />
+          <TestimonialsColumn 
+            testimonials={thirdColumn} 
+            className="hidden lg:block" 
+            duration={17} 
+          />
+        </motion.div>
       </div>
-
-      <style jsx>{`
-        @keyframes scroll-left {
-          0% {
-            transform: translateX(0);
-          }
-          100% {
-            transform: translateX(-50%);
-          }
-        }
-        
-        @keyframes scroll-right {
-          0% {
-            transform: translateX(-50%);
-          }
-          100% {
-            transform: translateX(0);
-          }
-        }
-        
-        .animate-scroll-left {
-          animation: scroll-left 40s linear infinite;
-        }
-        
-        .animate-scroll-right {
-          animation: scroll-right 40s linear infinite;
-        }
-        
-        .animate-scroll-left:hover,
-        .animate-scroll-right:hover {
-          animation-play-state: paused;
-        }
-      `}</style>
     </section>
   );
 }
