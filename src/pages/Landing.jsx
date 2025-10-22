@@ -8,15 +8,11 @@ import EmotionalCore from "../components/landing/EmotionalCore";
 import Proof from "../components/landing/Proof";
 import Blueprint from "../components/landing/Blueprint";
 import FinalClose from "../components/landing/FinalClose";
-import CountdownTimer from "../components/landing/CountdownTimer";
 import Testimonials from "../components/landing/Testimonials";
 
 export default function Landing() {
   return (
     <div className="min-h-screen overflow-x-hidden w-full">
-      {/* Combined Header with Countdown Timer */}
-      <CountdownTimer />
-
       <Hero />
       <Testimonials />
       <HardTruth />
