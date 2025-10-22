@@ -13,7 +13,7 @@ import Testimonials from "../components/landing/Testimonials";
 
 export default function Landing() {
   return (
-    <div className="min-h-screen overflow-x-hidden w-full" style={{ backgroundColor: 'var(--neutral-950)' }}>
+    <div className="min-h-screen overflow-x-hidden w-full">
       {/* Combined Header with Countdown Timer */}
       <CountdownTimer />
 
@@ -28,20 +28,20 @@ export default function Landing() {
       <FinalClose />
 
       {/* Footer */}
-      <footer className="py-8 sm:py-12 w-full" style={{ borderTop: '1px solid var(--alpha-white-10)' }}>
+      <footer className="py-8 sm:py-12 w-full border-t border-border/50">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <div className="text-xl sm:text-2xl mb-3 sm:mb-4" style={{ color: 'var(--white)', fontFamily: 'var(--font-display)' }}>
+          <div className="text-xl sm:text-2xl mb-3 sm:mb-4 font-display font-bold text-foreground">
             Archify.io
           </div>
-          <p className="text-xs sm:text-sm mb-6 sm:mb-8" style={{ color: 'var(--neutral-500)' }}>
+          <p className="text-xs sm:text-sm mb-6 sm:mb-8 text-muted-foreground">
             Turning social media into predictable implant revenue
           </p>
           <div className="flex flex-wrap justify-center gap-4 sm:gap-8 mb-6 sm:mb-8">
-            <a href="#" className="text-xs sm:text-sm transition-colors hover:text-white" style={{ color: 'var(--neutral-400)' }}>Privacy Policy</a>
-            <a href="#" className="text-xs sm:text-sm transition-colors hover:text-white" style={{ color: 'var(--neutral-400)' }}>Terms of Service</a>
-            <a href="#" className="text-xs sm:text-sm transition-colors hover:text-white" style={{ color: 'var(--neutral-400)' }}>Contact</a>
+            <a href="#" className="text-xs sm:text-sm text-muted-foreground transition-colors hover:text-foreground">Privacy Policy</a>
+            <a href="#" className="text-xs sm:text-sm text-muted-foreground transition-colors hover:text-foreground">Terms of Service</a>
+            <a href="#" className="text-xs sm:text-sm text-muted-foreground transition-colors hover:text-foreground">Contact</a>
           </div>
-          <div className="text-xs uppercase tracking-wider" style={{ color: 'var(--neutral-600)' }}>
+          <div className="text-xs uppercase tracking-wider text-muted-foreground/60">
             © 2025 Archify.io. All rights reserved.
           </div>
         </div>
