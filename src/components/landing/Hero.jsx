@@ -59,11 +59,11 @@ export default function Hero() {
           style={{ animationDelay: '200ms' }} 
           className={`mt-6 text-4xl font-bold tracking-tight md:text-6xl lg:text-7xl ${isMounted ? 'animate-fadeInUp' : 'opacity-0'}`}
         >
-          The Proven Blueprint for
-          <br />
+          The Proven Blueprint for{' '}
           <span className="bg-gradient-to-r from-rose-300 via-white to-indigo-300 bg-clip-text text-transparent">
             Full-Arch Growth
           </span>
+          {' '}— Launch in Under 7 Days
         </h1>
         
         <p 
